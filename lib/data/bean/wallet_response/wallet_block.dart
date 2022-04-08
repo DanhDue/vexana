@@ -1,12 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vexana/src/interface/INetworkModel.dart';
 
-part 'block_object.freezed.dart';
-part 'block_object.g.dart';
+part 'wallet_block.freezed.dart';
+part 'wallet_block.g.dart';
 
 @freezed
-class BlockObject extends INetworkModel<BlockObject> with _$BlockObject {
-  factory BlockObject({
+class WalletBlock with _$WalletBlock {
+  factory WalletBlock({
     int? version,
     int? timestamp,
     int? height,
@@ -23,8 +22,8 @@ class BlockObject extends INetworkModel<BlockObject> with _$BlockObject {
     String? idHex,
     String? id,
     String? burnedFee,
-  }) = _BlockObject;
+  }) = _WalletBlock;
 
-  factory BlockObject.fromJson(Map<String, dynamic> json) =>
-      _$BlockObjectFromJson(json);
+  factory WalletBlock.fromJson(Map<String, dynamic> json) =>
+      _$WalletBlockFromJson(json);
 }

@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/lib/data/bean/**/**.freezed.dart": true,
+        "**/lib/data/bean/**/**.g.dart": true
+    }
+}

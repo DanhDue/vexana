@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'block_object.dart';
+part of 'wallet_block.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BlockObject _$$_BlockObjectFromJson(Map<String, dynamic> json) =>
-    _$_BlockObject(
+_$_WalletBlock _$$_WalletBlockFromJson(Map<String, dynamic> json) =>
+    _$_WalletBlock(
       version: json['version'] as int?,
       timestamp: json['timestamp'] as int?,
       height: json['height'] as int?,
@@ -26,7 +26,7 @@ _$_BlockObject _$$_BlockObjectFromJson(Map<String, dynamic> json) =>
       burnedFee: json['burnedFee'] as String?,
     );
 
-Map<String, dynamic> _$$_BlockObjectToJson(_$_BlockObject instance) =>
+Map<String, dynamic> _$$_WalletBlockToJson(_$_WalletBlock instance) =>
     <String, dynamic>{
       'version': instance.version,
       'timestamp': instance.timestamp,

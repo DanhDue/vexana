@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'block_object.dart';
+part of 'wallet_block.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,15 +14,15 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-BlockObject _$BlockObjectFromJson(Map<String, dynamic> json) {
-  return _BlockObject.fromJson(json);
+WalletBlock _$WalletBlockFromJson(Map<String, dynamic> json) {
+  return _WalletBlock.fromJson(json);
 }
 
 /// @nodoc
-class _$BlockObjectTearOff {
-  const _$BlockObjectTearOff();
+class _$WalletBlockTearOff {
+  const _$WalletBlockTearOff();
 
-  _BlockObject call(
+  _WalletBlock call(
       {int? version,
       int? timestamp,
       int? height,
@@ -39,7 +39,7 @@ class _$BlockObjectTearOff {
       String? idHex,
       String? id,
       String? burnedFee}) {
-    return _BlockObject(
+    return _WalletBlock(
       version: version,
       timestamp: timestamp,
       height: height,
@@ -59,16 +59,16 @@ class _$BlockObjectTearOff {
     );
   }
 
-  BlockObject fromJson(Map<String, Object?> json) {
-    return BlockObject.fromJson(json);
+  WalletBlock fromJson(Map<String, Object?> json) {
+    return WalletBlock.fromJson(json);
   }
 }
 
 /// @nodoc
-const $BlockObject = _$BlockObjectTearOff();
+const $WalletBlock = _$WalletBlockTearOff();
 
 /// @nodoc
-mixin _$BlockObject {
+mixin _$WalletBlock {
   int? get version => throw _privateConstructorUsedError;
   int? get timestamp => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
@@ -88,15 +88,15 @@ mixin _$BlockObject {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BlockObjectCopyWith<BlockObject> get copyWith =>
+  $WalletBlockCopyWith<WalletBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BlockObjectCopyWith<$Res> {
-  factory $BlockObjectCopyWith(
-          BlockObject value, $Res Function(BlockObject) then) =
-      _$BlockObjectCopyWithImpl<$Res>;
+abstract class $WalletBlockCopyWith<$Res> {
+  factory $WalletBlockCopyWith(
+          WalletBlock value, $Res Function(WalletBlock) then) =
+      _$WalletBlockCopyWithImpl<$Res>;
   $Res call(
       {int? version,
       int? timestamp,
@@ -117,12 +117,12 @@ abstract class $BlockObjectCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BlockObjectCopyWithImpl<$Res> implements $BlockObjectCopyWith<$Res> {
-  _$BlockObjectCopyWithImpl(this._value, this._then);
+class _$WalletBlockCopyWithImpl<$Res> implements $WalletBlockCopyWith<$Res> {
+  _$WalletBlockCopyWithImpl(this._value, this._then);
 
-  final BlockObject _value;
+  final WalletBlock _value;
   // ignore: unused_field
-  final $Res Function(BlockObject) _then;
+  final $Res Function(WalletBlock) _then;
 
   @override
   $Res call({
@@ -213,11 +213,11 @@ class _$BlockObjectCopyWithImpl<$Res> implements $BlockObjectCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BlockObjectCopyWith<$Res>
-    implements $BlockObjectCopyWith<$Res> {
-  factory _$BlockObjectCopyWith(
-          _BlockObject value, $Res Function(_BlockObject) then) =
-      __$BlockObjectCopyWithImpl<$Res>;
+abstract class _$WalletBlockCopyWith<$Res>
+    implements $WalletBlockCopyWith<$Res> {
+  factory _$WalletBlockCopyWith(
+          _WalletBlock value, $Res Function(_WalletBlock) then) =
+      __$WalletBlockCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? version,
@@ -239,14 +239,14 @@ abstract class _$BlockObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BlockObjectCopyWithImpl<$Res> extends _$BlockObjectCopyWithImpl<$Res>
-    implements _$BlockObjectCopyWith<$Res> {
-  __$BlockObjectCopyWithImpl(
-      _BlockObject _value, $Res Function(_BlockObject) _then)
-      : super(_value, (v) => _then(v as _BlockObject));
+class __$WalletBlockCopyWithImpl<$Res> extends _$WalletBlockCopyWithImpl<$Res>
+    implements _$WalletBlockCopyWith<$Res> {
+  __$WalletBlockCopyWithImpl(
+      _WalletBlock _value, $Res Function(_WalletBlock) _then)
+      : super(_value, (v) => _then(v as _WalletBlock));
 
   @override
-  _BlockObject get _value => super._value as _BlockObject;
+  _WalletBlock get _value => super._value as _WalletBlock;
 
   @override
   $Res call({
@@ -267,7 +267,7 @@ class __$BlockObjectCopyWithImpl<$Res> extends _$BlockObjectCopyWithImpl<$Res>
     Object? id = freezed,
     Object? burnedFee = freezed,
   }) {
-    return _then(_BlockObject(
+    return _then(_WalletBlock(
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -338,8 +338,8 @@ class __$BlockObjectCopyWithImpl<$Res> extends _$BlockObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_BlockObject implements _BlockObject {
-  _$_BlockObject(
+class _$_WalletBlock implements _WalletBlock {
+  _$_WalletBlock(
       {this.version,
       this.timestamp,
       this.height,
@@ -357,8 +357,8 @@ class _$_BlockObject implements _BlockObject {
       this.id,
       this.burnedFee});
 
-  factory _$_BlockObject.fromJson(Map<String, dynamic> json) =>
-      _$$_BlockObjectFromJson(json);
+  factory _$_WalletBlock.fromJson(Map<String, dynamic> json) =>
+      _$$_WalletBlockFromJson(json);
 
   @override
   final int? version;
@@ -395,14 +395,14 @@ class _$_BlockObject implements _BlockObject {
 
   @override
   String toString() {
-    return 'BlockObject(version: $version, timestamp: $timestamp, height: $height, previousBlockHex: $previousBlockHex, previousBlock: $previousBlock, numberOfTransactions: $numberOfTransactions, totalAmount: $totalAmount, totalFee: $totalFee, reward: $reward, payloadLength: $payloadLength, payloadHash: $payloadHash, generatorPublicKey: $generatorPublicKey, blockSignature: $blockSignature, idHex: $idHex, id: $id, burnedFee: $burnedFee)';
+    return 'WalletBlock(version: $version, timestamp: $timestamp, height: $height, previousBlockHex: $previousBlockHex, previousBlock: $previousBlock, numberOfTransactions: $numberOfTransactions, totalAmount: $totalAmount, totalFee: $totalFee, reward: $reward, payloadLength: $payloadLength, payloadHash: $payloadHash, generatorPublicKey: $generatorPublicKey, blockSignature: $blockSignature, idHex: $idHex, id: $id, burnedFee: $burnedFee)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BlockObject &&
+            other is _WalletBlock &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
             const DeepCollectionEquality().equals(other.height, height) &&
@@ -451,17 +451,17 @@ class _$_BlockObject implements _BlockObject {
 
   @JsonKey(ignore: true)
   @override
-  _$BlockObjectCopyWith<_BlockObject> get copyWith =>
-      __$BlockObjectCopyWithImpl<_BlockObject>(this, _$identity);
+  _$WalletBlockCopyWith<_WalletBlock> get copyWith =>
+      __$WalletBlockCopyWithImpl<_WalletBlock>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockObjectToJson(this);
+    return _$$_WalletBlockToJson(this);
   }
 }
 
-abstract class _BlockObject implements BlockObject {
-  factory _BlockObject(
+abstract class _WalletBlock implements WalletBlock {
+  factory _WalletBlock(
       {int? version,
       int? timestamp,
       int? height,
@@ -477,10 +477,10 @@ abstract class _BlockObject implements BlockObject {
       String? blockSignature,
       String? idHex,
       String? id,
-      String? burnedFee}) = _$_BlockObject;
+      String? burnedFee}) = _$_WalletBlock;
 
-  factory _BlockObject.fromJson(Map<String, dynamic> json) =
-      _$_BlockObject.fromJson;
+  factory _WalletBlock.fromJson(Map<String, dynamic> json) =
+      _$_WalletBlock.fromJson;
 
   @override
   int? get version;
@@ -516,6 +516,6 @@ abstract class _BlockObject implements BlockObject {
   String? get burnedFee;
   @override
   @JsonKey(ignore: true)
-  _$BlockObjectCopyWith<_BlockObject> get copyWith =>
+  _$WalletBlockCopyWith<_WalletBlock> get copyWith =>
       throw _privateConstructorUsedError;
 }
