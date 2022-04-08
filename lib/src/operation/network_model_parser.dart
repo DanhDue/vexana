@@ -11,7 +11,7 @@ dynamic _decodeBody(String body) async {
 extension _CoreServiceExtension on NetworkManager {
   dynamic _getBodyModel(dynamic data) {
     if (data is INetworkModel) {
-      return data.toJson();
+      return data.encodeJson();
     } else if (data != null) {
       return jsonEncode(data);
     } else {
@@ -22,9 +22,9 @@ extension _CoreServiceExtension on NetworkManager {
   R? _parseBody<R, T extends INetworkModel>(dynamic responseBody, T model) {
     try {
       if (responseBody is List) {
-        return responseBody.map((data) => model.fromJson(data)).cast<T>().toList() as R;
+        return responseBody.map((data) => model.decodeJson(data)).cast<T>().toList() as R;
       } else if (responseBody is Map<String, dynamic>) {
-        return model.fromJson(responseBody) as R;
+        return model.decodeJson(responseBody) as R;
       } else {
         if (R is EmptyModel || R == EmptyModel) {
           return EmptyModel(name: responseBody.toString()) as R;

@@ -218,7 +218,7 @@ class NetworkManager with dio.DioMixin implements dio.Dio, INetworkManager {
     if (errorModel == null) {
       error.response = data;
     } else {
-      error.model = errorModel?.fromJson(jsonDecode(data));
+      error.model = errorModel?.decodeJson(jsonDecode(data));
     }
     return error;
   }
