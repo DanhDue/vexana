@@ -13,6 +13,7 @@ class Wallet with _$Wallet {
     String? balance,
     String? nonce,
     @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
+    bool? isValidated,
   }) = _Wallet;
 
   factory Wallet.fromJson(Map<String, dynamic> json) => _$WalletFromJson(json);

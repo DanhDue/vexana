@@ -27,13 +27,15 @@ class _$WalletTearOff {
       String? publicKey,
       String? balance,
       String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs}) {
+      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
+      bool? isValidated}) {
     return _Wallet(
       address: address,
       publicKey: publicKey,
       balance: balance,
       nonce: nonce,
       walletAttrs: walletAttrs,
+      isValidated: isValidated,
     );
   }
 
@@ -53,6 +55,7 @@ mixin _$Wallet {
   String? get nonce => throw _privateConstructorUsedError;
   @JsonKey(name: 'attributes')
   WalletAttrs? get walletAttrs => throw _privateConstructorUsedError;
+  bool? get isValidated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,7 +71,8 @@ abstract class $WalletCopyWith<$Res> {
       String? publicKey,
       String? balance,
       String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs});
+      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
+      bool? isValidated});
 
   $WalletAttrsCopyWith<$Res>? get walletAttrs;
 }
@@ -88,6 +92,7 @@ class _$WalletCopyWithImpl<$Res> implements $WalletCopyWith<$Res> {
     Object? balance = freezed,
     Object? nonce = freezed,
     Object? walletAttrs = freezed,
+    Object? isValidated = freezed,
   }) {
     return _then(_value.copyWith(
       address: address == freezed
@@ -110,6 +115,10 @@ class _$WalletCopyWithImpl<$Res> implements $WalletCopyWith<$Res> {
           ? _value.walletAttrs
           : walletAttrs // ignore: cast_nullable_to_non_nullable
               as WalletAttrs?,
+      isValidated: isValidated == freezed
+          ? _value.isValidated
+          : isValidated // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 
@@ -135,7 +144,8 @@ abstract class _$WalletCopyWith<$Res> implements $WalletCopyWith<$Res> {
       String? publicKey,
       String? balance,
       String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs});
+      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
+      bool? isValidated});
 
   @override
   $WalletAttrsCopyWith<$Res>? get walletAttrs;
@@ -157,6 +167,7 @@ class __$WalletCopyWithImpl<$Res> extends _$WalletCopyWithImpl<$Res>
     Object? balance = freezed,
     Object? nonce = freezed,
     Object? walletAttrs = freezed,
+    Object? isValidated = freezed,
   }) {
     return _then(_Wallet(
       address: address == freezed
@@ -179,6 +190,10 @@ class __$WalletCopyWithImpl<$Res> extends _$WalletCopyWithImpl<$Res>
           ? _value.walletAttrs
           : walletAttrs // ignore: cast_nullable_to_non_nullable
               as WalletAttrs?,
+      isValidated: isValidated == freezed
+          ? _value.isValidated
+          : isValidated // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -191,7 +206,8 @@ class _$_Wallet implements _Wallet {
       this.publicKey,
       this.balance,
       this.nonce,
-      @JsonKey(name: 'attributes') this.walletAttrs});
+      @JsonKey(name: 'attributes') this.walletAttrs,
+      this.isValidated});
 
   factory _$_Wallet.fromJson(Map<String, dynamic> json) =>
       _$$_WalletFromJson(json);
@@ -207,10 +223,12 @@ class _$_Wallet implements _Wallet {
   @override
   @JsonKey(name: 'attributes')
   final WalletAttrs? walletAttrs;
+  @override
+  final bool? isValidated;
 
   @override
   String toString() {
-    return 'Wallet(address: $address, publicKey: $publicKey, balance: $balance, nonce: $nonce, walletAttrs: $walletAttrs)';
+    return 'Wallet(address: $address, publicKey: $publicKey, balance: $balance, nonce: $nonce, walletAttrs: $walletAttrs, isValidated: $isValidated)';
   }
 
   @override
@@ -223,7 +241,9 @@ class _$_Wallet implements _Wallet {
             const DeepCollectionEquality().equals(other.balance, balance) &&
             const DeepCollectionEquality().equals(other.nonce, nonce) &&
             const DeepCollectionEquality()
-                .equals(other.walletAttrs, walletAttrs));
+                .equals(other.walletAttrs, walletAttrs) &&
+            const DeepCollectionEquality()
+                .equals(other.isValidated, isValidated));
   }
 
   @override
@@ -233,7 +253,8 @@ class _$_Wallet implements _Wallet {
       const DeepCollectionEquality().hash(publicKey),
       const DeepCollectionEquality().hash(balance),
       const DeepCollectionEquality().hash(nonce),
-      const DeepCollectionEquality().hash(walletAttrs));
+      const DeepCollectionEquality().hash(walletAttrs),
+      const DeepCollectionEquality().hash(isValidated));
 
   @JsonKey(ignore: true)
   @override
@@ -252,7 +273,8 @@ abstract class _Wallet implements Wallet {
       String? publicKey,
       String? balance,
       String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs}) = _$_Wallet;
+      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
+      bool? isValidated}) = _$_Wallet;
 
   factory _Wallet.fromJson(Map<String, dynamic> json) = _$_Wallet.fromJson;
 
@@ -267,6 +289,8 @@ abstract class _Wallet implements Wallet {
   @override
   @JsonKey(name: 'attributes')
   WalletAttrs? get walletAttrs;
+  @override
+  bool? get isValidated;
   @override
   @JsonKey(ignore: true)
   _$WalletCopyWith<_Wallet> get copyWith => throw _privateConstructorUsedError;

@@ -14,6 +14,7 @@ _$_Wallet _$$_WalletFromJson(Map<String, dynamic> json) => _$_Wallet(
       walletAttrs: json['attributes'] == null
           ? null
           : WalletAttrs.fromJson(json['attributes'] as Map<String, dynamic>),
+      isValidated: json['isValidated'] as bool?,
     );
 
 Map<String, dynamic> _$$_WalletToJson(_$_Wallet instance) => <String, dynamic>{
@@ -22,4 +23,5 @@ Map<String, dynamic> _$$_WalletToJson(_$_Wallet instance) => <String, dynamic>{
       'balance': instance.balance,
       'nonce': instance.nonce,
       'attributes': instance.walletAttrs,
+      'isValidated': instance.isValidated,
     };
