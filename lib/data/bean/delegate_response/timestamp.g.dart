@@ -6,7 +6,7 @@ part of 'timestamp.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class TimestampAdapter extends TypeAdapter<Timestamp> {
+class DelegateTimestampAdapter extends TypeAdapter<Timestamp> {
   @override
   final int typeId = 9;
 
@@ -41,7 +41,7 @@ class TimestampAdapter extends TypeAdapter<Timestamp> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is TimestampAdapter &&
+      other is DelegateTimestampAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

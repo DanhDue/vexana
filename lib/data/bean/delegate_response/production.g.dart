@@ -6,7 +6,7 @@ part of 'production.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class ProductionAdapter extends TypeAdapter<Production> {
+class DelegateProductionAdapter extends TypeAdapter<Production> {
   @override
   final int typeId = 8;
 
@@ -35,7 +35,7 @@ class ProductionAdapter extends TypeAdapter<Production> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ProductionAdapter &&
+      other is DelegateProductionAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

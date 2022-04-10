@@ -9,5 +9,7 @@ class Constants {
   static const delegateLastBlockHiveTypeId = 6;
   static const delegateForgedHiveTypeId = 7;
   static const delegateProductionHiveTypeId = 8;
+  static const delegateProductionAdapterName = 'DelegateProductionAdapter';
   static const delegateTimestampHiveTypeId = 9;
+  static const delegateTimestampAdapterName = 'DelegateTimestampAdapter';
 }

@@ -3,10 +3,13 @@ import 'package:hive/hive.dart';
 import 'package:vexana/data/constants.dart';
 
 part 'production.freezed.dart';
+
 part 'production.g.dart';
 
 @freezed
-@HiveType(typeId: Constants.delegateProductionHiveTypeId)
+@HiveType(
+    typeId: Constants.delegateProductionHiveTypeId,
+    adapterName: Constants.delegateProductionAdapterName)
 class Production with _$Production {
   factory Production({
     @HiveField(0) double? approval,

@@ -3,10 +3,13 @@ import 'package:hive/hive.dart';
 import 'package:vexana/data/constants.dart';
 
 part 'timestamp.freezed.dart';
+
 part 'timestamp.g.dart';
 
 @freezed
-@HiveType(typeId: Constants.delegateTimestampHiveTypeId)
+@HiveType(
+    typeId: Constants.delegateTimestampHiveTypeId,
+    adapterName: Constants.delegateTimestampAdapterName)
 class Timestamp with _$Timestamp {
   factory Timestamp({
     @HiveField(0) int? epoch,
