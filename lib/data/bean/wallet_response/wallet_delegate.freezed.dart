@@ -23,16 +23,16 @@ class _$WalletDelegateTearOff {
   const _$WalletDelegateTearOff();
 
   _WalletDelegate call(
-      {String? username,
-      String? voteBalance,
-      String? forgedFees,
-      String? burnedFees,
-      String? forgedRewards,
-      int? producedBlocks,
-      int? rank,
-      @JsonKey(name: 'lastBlock') WalletBlock? walletBlock,
-      int? round,
-      String? version}) {
+      {@HiveField(0) String? username,
+      @HiveField(1) String? voteBalance,
+      @HiveField(2) String? forgedFees,
+      @HiveField(3) String? burnedFees,
+      @HiveField(4) String? forgedRewards,
+      @HiveField(5) int? producedBlocks,
+      @HiveField(6) int? rank,
+      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @HiveField(8) int? round,
+      @HiveField(9) String? version}) {
     return _WalletDelegate(
       username: username,
       voteBalance: voteBalance,
@@ -57,16 +57,26 @@ const $WalletDelegate = _$WalletDelegateTearOff();
 
 /// @nodoc
 mixin _$WalletDelegate {
+  @HiveField(0)
   String? get username => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get voteBalance => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get forgedFees => throw _privateConstructorUsedError;
+  @HiveField(3)
   String? get burnedFees => throw _privateConstructorUsedError;
+  @HiveField(4)
   String? get forgedRewards => throw _privateConstructorUsedError;
+  @HiveField(5)
   int? get producedBlocks => throw _privateConstructorUsedError;
+  @HiveField(6)
   int? get rank => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastBlock')
+  @HiveField(7)
   WalletBlock? get walletBlock => throw _privateConstructorUsedError;
+  @HiveField(8)
   int? get round => throw _privateConstructorUsedError;
+  @HiveField(9)
   String? get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -81,16 +91,16 @@ abstract class $WalletDelegateCopyWith<$Res> {
           WalletDelegate value, $Res Function(WalletDelegate) then) =
       _$WalletDelegateCopyWithImpl<$Res>;
   $Res call(
-      {String? username,
-      String? voteBalance,
-      String? forgedFees,
-      String? burnedFees,
-      String? forgedRewards,
-      int? producedBlocks,
-      int? rank,
-      @JsonKey(name: 'lastBlock') WalletBlock? walletBlock,
-      int? round,
-      String? version});
+      {@HiveField(0) String? username,
+      @HiveField(1) String? voteBalance,
+      @HiveField(2) String? forgedFees,
+      @HiveField(3) String? burnedFees,
+      @HiveField(4) String? forgedRewards,
+      @HiveField(5) int? producedBlocks,
+      @HiveField(6) int? rank,
+      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @HiveField(8) int? round,
+      @HiveField(9) String? version});
 
   $WalletBlockCopyWith<$Res>? get walletBlock;
 }
@@ -181,16 +191,16 @@ abstract class _$WalletDelegateCopyWith<$Res>
       __$WalletDelegateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? username,
-      String? voteBalance,
-      String? forgedFees,
-      String? burnedFees,
-      String? forgedRewards,
-      int? producedBlocks,
-      int? rank,
-      @JsonKey(name: 'lastBlock') WalletBlock? walletBlock,
-      int? round,
-      String? version});
+      {@HiveField(0) String? username,
+      @HiveField(1) String? voteBalance,
+      @HiveField(2) String? forgedFees,
+      @HiveField(3) String? burnedFees,
+      @HiveField(4) String? forgedRewards,
+      @HiveField(5) int? producedBlocks,
+      @HiveField(6) int? rank,
+      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @HiveField(8) int? round,
+      @HiveField(9) String? version});
 
   @override
   $WalletBlockCopyWith<$Res>? get walletBlock;
@@ -269,40 +279,50 @@ class __$WalletDelegateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WalletDelegate implements _WalletDelegate {
   _$_WalletDelegate(
-      {this.username,
-      this.voteBalance,
-      this.forgedFees,
-      this.burnedFees,
-      this.forgedRewards,
-      this.producedBlocks,
-      this.rank,
-      @JsonKey(name: 'lastBlock') this.walletBlock,
-      this.round,
-      this.version});
+      {@HiveField(0) this.username,
+      @HiveField(1) this.voteBalance,
+      @HiveField(2) this.forgedFees,
+      @HiveField(3) this.burnedFees,
+      @HiveField(4) this.forgedRewards,
+      @HiveField(5) this.producedBlocks,
+      @HiveField(6) this.rank,
+      @JsonKey(name: 'lastBlock') @HiveField(7) this.walletBlock,
+      @HiveField(8) this.round,
+      @HiveField(9) this.version});
 
   factory _$_WalletDelegate.fromJson(Map<String, dynamic> json) =>
       _$$_WalletDelegateFromJson(json);
 
   @override
+  @HiveField(0)
   final String? username;
   @override
+  @HiveField(1)
   final String? voteBalance;
   @override
+  @HiveField(2)
   final String? forgedFees;
   @override
+  @HiveField(3)
   final String? burnedFees;
   @override
+  @HiveField(4)
   final String? forgedRewards;
   @override
+  @HiveField(5)
   final int? producedBlocks;
   @override
+  @HiveField(6)
   final int? rank;
   @override
   @JsonKey(name: 'lastBlock')
+  @HiveField(7)
   final WalletBlock? walletBlock;
   @override
+  @HiveField(8)
   final int? round;
   @override
+  @HiveField(9)
   final String? version;
 
   @override
@@ -360,40 +380,50 @@ class _$_WalletDelegate implements _WalletDelegate {
 
 abstract class _WalletDelegate implements WalletDelegate {
   factory _WalletDelegate(
-      {String? username,
-      String? voteBalance,
-      String? forgedFees,
-      String? burnedFees,
-      String? forgedRewards,
-      int? producedBlocks,
-      int? rank,
-      @JsonKey(name: 'lastBlock') WalletBlock? walletBlock,
-      int? round,
-      String? version}) = _$_WalletDelegate;
+      {@HiveField(0) String? username,
+      @HiveField(1) String? voteBalance,
+      @HiveField(2) String? forgedFees,
+      @HiveField(3) String? burnedFees,
+      @HiveField(4) String? forgedRewards,
+      @HiveField(5) int? producedBlocks,
+      @HiveField(6) int? rank,
+      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @HiveField(8) int? round,
+      @HiveField(9) String? version}) = _$_WalletDelegate;
 
   factory _WalletDelegate.fromJson(Map<String, dynamic> json) =
       _$_WalletDelegate.fromJson;
 
   @override
+  @HiveField(0)
   String? get username;
   @override
+  @HiveField(1)
   String? get voteBalance;
   @override
+  @HiveField(2)
   String? get forgedFees;
   @override
+  @HiveField(3)
   String? get burnedFees;
   @override
+  @HiveField(4)
   String? get forgedRewards;
   @override
+  @HiveField(5)
   int? get producedBlocks;
   @override
+  @HiveField(6)
   int? get rank;
   @override
   @JsonKey(name: 'lastBlock')
+  @HiveField(7)
   WalletBlock? get walletBlock;
   @override
+  @HiveField(8)
   int? get round;
   @override
+  @HiveField(9)
   String? get version;
   @override
   @JsonKey(ignore: true)

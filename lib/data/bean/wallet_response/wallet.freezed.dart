@@ -23,12 +23,12 @@ class _$WalletTearOff {
   const _$WalletTearOff();
 
   _Wallet call(
-      {String? address,
-      String? publicKey,
-      String? balance,
-      String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
-      bool? isValidated}) {
+      {@HiveField(0) String? address,
+      @HiveField(1) String? publicKey,
+      @HiveField(2) String? balance,
+      @HiveField(3) String? nonce,
+      @JsonKey(name: 'attributes') @HiveField(4) WalletAttrs? walletAttrs,
+      @HiveField(5) bool? isValidated}) {
     return _Wallet(
       address: address,
       publicKey: publicKey,
@@ -49,12 +49,18 @@ const $Wallet = _$WalletTearOff();
 
 /// @nodoc
 mixin _$Wallet {
+  @HiveField(0)
   String? get address => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get publicKey => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get balance => throw _privateConstructorUsedError;
+  @HiveField(3)
   String? get nonce => throw _privateConstructorUsedError;
   @JsonKey(name: 'attributes')
+  @HiveField(4)
   WalletAttrs? get walletAttrs => throw _privateConstructorUsedError;
+  @HiveField(5)
   bool? get isValidated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -67,12 +73,12 @@ abstract class $WalletCopyWith<$Res> {
   factory $WalletCopyWith(Wallet value, $Res Function(Wallet) then) =
       _$WalletCopyWithImpl<$Res>;
   $Res call(
-      {String? address,
-      String? publicKey,
-      String? balance,
-      String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
-      bool? isValidated});
+      {@HiveField(0) String? address,
+      @HiveField(1) String? publicKey,
+      @HiveField(2) String? balance,
+      @HiveField(3) String? nonce,
+      @JsonKey(name: 'attributes') @HiveField(4) WalletAttrs? walletAttrs,
+      @HiveField(5) bool? isValidated});
 
   $WalletAttrsCopyWith<$Res>? get walletAttrs;
 }
@@ -140,12 +146,12 @@ abstract class _$WalletCopyWith<$Res> implements $WalletCopyWith<$Res> {
       __$WalletCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? address,
-      String? publicKey,
-      String? balance,
-      String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
-      bool? isValidated});
+      {@HiveField(0) String? address,
+      @HiveField(1) String? publicKey,
+      @HiveField(2) String? balance,
+      @HiveField(3) String? nonce,
+      @JsonKey(name: 'attributes') @HiveField(4) WalletAttrs? walletAttrs,
+      @HiveField(5) bool? isValidated});
 
   @override
   $WalletAttrsCopyWith<$Res>? get walletAttrs;
@@ -202,28 +208,34 @@ class __$WalletCopyWithImpl<$Res> extends _$WalletCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Wallet implements _Wallet {
   _$_Wallet(
-      {this.address,
-      this.publicKey,
-      this.balance,
-      this.nonce,
-      @JsonKey(name: 'attributes') this.walletAttrs,
-      this.isValidated});
+      {@HiveField(0) this.address,
+      @HiveField(1) this.publicKey,
+      @HiveField(2) this.balance,
+      @HiveField(3) this.nonce,
+      @JsonKey(name: 'attributes') @HiveField(4) this.walletAttrs,
+      @HiveField(5) this.isValidated});
 
   factory _$_Wallet.fromJson(Map<String, dynamic> json) =>
       _$$_WalletFromJson(json);
 
   @override
+  @HiveField(0)
   final String? address;
   @override
+  @HiveField(1)
   final String? publicKey;
   @override
+  @HiveField(2)
   final String? balance;
   @override
+  @HiveField(3)
   final String? nonce;
   @override
   @JsonKey(name: 'attributes')
+  @HiveField(4)
   final WalletAttrs? walletAttrs;
   @override
+  @HiveField(5)
   final bool? isValidated;
 
   @override
@@ -269,27 +281,33 @@ class _$_Wallet implements _Wallet {
 
 abstract class _Wallet implements Wallet {
   factory _Wallet(
-      {String? address,
-      String? publicKey,
-      String? balance,
-      String? nonce,
-      @JsonKey(name: 'attributes') WalletAttrs? walletAttrs,
-      bool? isValidated}) = _$_Wallet;
+      {@HiveField(0) String? address,
+      @HiveField(1) String? publicKey,
+      @HiveField(2) String? balance,
+      @HiveField(3) String? nonce,
+      @JsonKey(name: 'attributes') @HiveField(4) WalletAttrs? walletAttrs,
+      @HiveField(5) bool? isValidated}) = _$_Wallet;
 
   factory _Wallet.fromJson(Map<String, dynamic> json) = _$_Wallet.fromJson;
 
   @override
+  @HiveField(0)
   String? get address;
   @override
+  @HiveField(1)
   String? get publicKey;
   @override
+  @HiveField(2)
   String? get balance;
   @override
+  @HiveField(3)
   String? get nonce;
   @override
   @JsonKey(name: 'attributes')
+  @HiveField(4)
   WalletAttrs? get walletAttrs;
   @override
+  @HiveField(5)
   bool? get isValidated;
   @override
   @JsonKey(ignore: true)

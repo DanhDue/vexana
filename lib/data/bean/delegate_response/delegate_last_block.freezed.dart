@@ -22,7 +22,10 @@ DelegateLastBlock _$DelegateLastBlockFromJson(Map<String, dynamic> json) {
 class _$DelegateLastBlockTearOff {
   const _$DelegateLastBlockTearOff();
 
-  _DelegateLastBlock call({String? id, int? height, Timestamp? timestamp}) {
+  _DelegateLastBlock call(
+      {@HiveField(0) String? id,
+      @HiveField(1) int? height,
+      @HiveField(2) Timestamp? timestamp}) {
     return _DelegateLastBlock(
       id: id,
       height: height,
@@ -40,8 +43,11 @@ const $DelegateLastBlock = _$DelegateLastBlockTearOff();
 
 /// @nodoc
 mixin _$DelegateLastBlock {
+  @HiveField(0)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   int? get height => throw _privateConstructorUsedError;
+  @HiveField(2)
   Timestamp? get timestamp => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,7 +61,10 @@ abstract class $DelegateLastBlockCopyWith<$Res> {
   factory $DelegateLastBlockCopyWith(
           DelegateLastBlock value, $Res Function(DelegateLastBlock) then) =
       _$DelegateLastBlockCopyWithImpl<$Res>;
-  $Res call({String? id, int? height, Timestamp? timestamp});
+  $Res call(
+      {@HiveField(0) String? id,
+      @HiveField(1) int? height,
+      @HiveField(2) Timestamp? timestamp});
 
   $TimestampCopyWith<$Res>? get timestamp;
 }
@@ -110,7 +119,10 @@ abstract class _$DelegateLastBlockCopyWith<$Res>
           _DelegateLastBlock value, $Res Function(_DelegateLastBlock) then) =
       __$DelegateLastBlockCopyWithImpl<$Res>;
   @override
-  $Res call({String? id, int? height, Timestamp? timestamp});
+  $Res call(
+      {@HiveField(0) String? id,
+      @HiveField(1) int? height,
+      @HiveField(2) Timestamp? timestamp});
 
   @override
   $TimestampCopyWith<$Res>? get timestamp;
@@ -153,16 +165,22 @@ class __$DelegateLastBlockCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DelegateLastBlock implements _DelegateLastBlock {
-  _$_DelegateLastBlock({this.id, this.height, this.timestamp});
+  _$_DelegateLastBlock(
+      {@HiveField(0) this.id,
+      @HiveField(1) this.height,
+      @HiveField(2) this.timestamp});
 
   factory _$_DelegateLastBlock.fromJson(Map<String, dynamic> json) =>
       _$$_DelegateLastBlockFromJson(json);
 
   @override
+  @HiveField(0)
   final String? id;
   @override
+  @HiveField(1)
   final int? height;
   @override
+  @HiveField(2)
   final Timestamp? timestamp;
 
   @override
@@ -199,17 +217,22 @@ class _$_DelegateLastBlock implements _DelegateLastBlock {
 }
 
 abstract class _DelegateLastBlock implements DelegateLastBlock {
-  factory _DelegateLastBlock({String? id, int? height, Timestamp? timestamp}) =
-      _$_DelegateLastBlock;
+  factory _DelegateLastBlock(
+      {@HiveField(0) String? id,
+      @HiveField(1) int? height,
+      @HiveField(2) Timestamp? timestamp}) = _$_DelegateLastBlock;
 
   factory _DelegateLastBlock.fromJson(Map<String, dynamic> json) =
       _$_DelegateLastBlock.fromJson;
 
   @override
+  @HiveField(0)
   String? get id;
   @override
+  @HiveField(1)
   int? get height;
   @override
+  @HiveField(2)
   Timestamp? get timestamp;
   @override
   @JsonKey(ignore: true)

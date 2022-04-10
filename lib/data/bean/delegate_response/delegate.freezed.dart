@@ -23,16 +23,16 @@ class _$DelegateTearOff {
   const _$DelegateTearOff();
 
   _Delegate call(
-      {String? username,
-      String? address,
-      String? publicKey,
-      String? votes,
-      int? rank,
-      bool? isResigned,
-      @JsonKey(name: 'blocks') DelegateBlocks? delegateBlocks,
-      Production? production,
-      @JsonKey(name: 'forged') DelegateForged? delegateForged,
-      String? version}) {
+      {@HiveField(0) String? username,
+      @HiveField(1) String? address,
+      @HiveField(2) String? publicKey,
+      @HiveField(3) String? votes,
+      @HiveField(4) int? rank,
+      @HiveField(5) bool? isResigned,
+      @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
+      @HiveField(7) Production? production,
+      @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
+      @HiveField(9) String? version}) {
     return _Delegate(
       username: username,
       address: address,
@@ -57,17 +57,27 @@ const $Delegate = _$DelegateTearOff();
 
 /// @nodoc
 mixin _$Delegate {
+  @HiveField(0)
   String? get username => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get address => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get publicKey => throw _privateConstructorUsedError;
+  @HiveField(3)
   String? get votes => throw _privateConstructorUsedError;
+  @HiveField(4)
   int? get rank => throw _privateConstructorUsedError;
+  @HiveField(5)
   bool? get isResigned => throw _privateConstructorUsedError;
   @JsonKey(name: 'blocks')
+  @HiveField(6)
   DelegateBlocks? get delegateBlocks => throw _privateConstructorUsedError;
+  @HiveField(7)
   Production? get production => throw _privateConstructorUsedError;
   @JsonKey(name: 'forged')
+  @HiveField(8)
   DelegateForged? get delegateForged => throw _privateConstructorUsedError;
+  @HiveField(9)
   String? get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -81,16 +91,16 @@ abstract class $DelegateCopyWith<$Res> {
   factory $DelegateCopyWith(Delegate value, $Res Function(Delegate) then) =
       _$DelegateCopyWithImpl<$Res>;
   $Res call(
-      {String? username,
-      String? address,
-      String? publicKey,
-      String? votes,
-      int? rank,
-      bool? isResigned,
-      @JsonKey(name: 'blocks') DelegateBlocks? delegateBlocks,
-      Production? production,
-      @JsonKey(name: 'forged') DelegateForged? delegateForged,
-      String? version});
+      {@HiveField(0) String? username,
+      @HiveField(1) String? address,
+      @HiveField(2) String? publicKey,
+      @HiveField(3) String? votes,
+      @HiveField(4) int? rank,
+      @HiveField(5) bool? isResigned,
+      @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
+      @HiveField(7) Production? production,
+      @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
+      @HiveField(9) String? version});
 
   $DelegateBlocksCopyWith<$Res>? get delegateBlocks;
   $ProductionCopyWith<$Res>? get production;
@@ -202,16 +212,16 @@ abstract class _$DelegateCopyWith<$Res> implements $DelegateCopyWith<$Res> {
       __$DelegateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String? username,
-      String? address,
-      String? publicKey,
-      String? votes,
-      int? rank,
-      bool? isResigned,
-      @JsonKey(name: 'blocks') DelegateBlocks? delegateBlocks,
-      Production? production,
-      @JsonKey(name: 'forged') DelegateForged? delegateForged,
-      String? version});
+      {@HiveField(0) String? username,
+      @HiveField(1) String? address,
+      @HiveField(2) String? publicKey,
+      @HiveField(3) String? votes,
+      @HiveField(4) int? rank,
+      @HiveField(5) bool? isResigned,
+      @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
+      @HiveField(7) Production? production,
+      @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
+      @HiveField(9) String? version});
 
   @override
   $DelegateBlocksCopyWith<$Res>? get delegateBlocks;
@@ -292,41 +302,51 @@ class __$DelegateCopyWithImpl<$Res> extends _$DelegateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Delegate implements _Delegate {
   _$_Delegate(
-      {this.username,
-      this.address,
-      this.publicKey,
-      this.votes,
-      this.rank,
-      this.isResigned,
-      @JsonKey(name: 'blocks') this.delegateBlocks,
-      this.production,
-      @JsonKey(name: 'forged') this.delegateForged,
-      this.version});
+      {@HiveField(0) this.username,
+      @HiveField(1) this.address,
+      @HiveField(2) this.publicKey,
+      @HiveField(3) this.votes,
+      @HiveField(4) this.rank,
+      @HiveField(5) this.isResigned,
+      @JsonKey(name: 'blocks') @HiveField(6) this.delegateBlocks,
+      @HiveField(7) this.production,
+      @JsonKey(name: 'forged') @HiveField(8) this.delegateForged,
+      @HiveField(9) this.version});
 
   factory _$_Delegate.fromJson(Map<String, dynamic> json) =>
       _$$_DelegateFromJson(json);
 
   @override
+  @HiveField(0)
   final String? username;
   @override
+  @HiveField(1)
   final String? address;
   @override
+  @HiveField(2)
   final String? publicKey;
   @override
+  @HiveField(3)
   final String? votes;
   @override
+  @HiveField(4)
   final int? rank;
   @override
+  @HiveField(5)
   final bool? isResigned;
   @override
   @JsonKey(name: 'blocks')
+  @HiveField(6)
   final DelegateBlocks? delegateBlocks;
   @override
+  @HiveField(7)
   final Production? production;
   @override
   @JsonKey(name: 'forged')
+  @HiveField(8)
   final DelegateForged? delegateForged;
   @override
+  @HiveField(9)
   final String? version;
 
   @override
@@ -382,40 +402,50 @@ class _$_Delegate implements _Delegate {
 
 abstract class _Delegate implements Delegate {
   factory _Delegate(
-      {String? username,
-      String? address,
-      String? publicKey,
-      String? votes,
-      int? rank,
-      bool? isResigned,
-      @JsonKey(name: 'blocks') DelegateBlocks? delegateBlocks,
-      Production? production,
-      @JsonKey(name: 'forged') DelegateForged? delegateForged,
-      String? version}) = _$_Delegate;
+      {@HiveField(0) String? username,
+      @HiveField(1) String? address,
+      @HiveField(2) String? publicKey,
+      @HiveField(3) String? votes,
+      @HiveField(4) int? rank,
+      @HiveField(5) bool? isResigned,
+      @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
+      @HiveField(7) Production? production,
+      @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
+      @HiveField(9) String? version}) = _$_Delegate;
 
   factory _Delegate.fromJson(Map<String, dynamic> json) = _$_Delegate.fromJson;
 
   @override
+  @HiveField(0)
   String? get username;
   @override
+  @HiveField(1)
   String? get address;
   @override
+  @HiveField(2)
   String? get publicKey;
   @override
+  @HiveField(3)
   String? get votes;
   @override
+  @HiveField(4)
   int? get rank;
   @override
+  @HiveField(5)
   bool? get isResigned;
   @override
   @JsonKey(name: 'blocks')
+  @HiveField(6)
   DelegateBlocks? get delegateBlocks;
   @override
+  @HiveField(7)
   Production? get production;
   @override
   @JsonKey(name: 'forged')
+  @HiveField(8)
   DelegateForged? get delegateForged;
   @override
+  @HiveField(9)
   String? get version;
   @override
   @JsonKey(ignore: true)

@@ -23,7 +23,10 @@ class _$DelegateForgedTearOff {
   const _$DelegateForgedTearOff();
 
   _DelegateForged call(
-      {String? fees, String? burnedFees, String? rewards, String? total}) {
+      {@HiveField(0) String? fees,
+      @HiveField(1) String? burnedFees,
+      @HiveField(2) String? rewards,
+      @HiveField(3) String? total}) {
     return _DelegateForged(
       fees: fees,
       burnedFees: burnedFees,
@@ -42,9 +45,13 @@ const $DelegateForged = _$DelegateForgedTearOff();
 
 /// @nodoc
 mixin _$DelegateForged {
+  @HiveField(0)
   String? get fees => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get burnedFees => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get rewards => throw _privateConstructorUsedError;
+  @HiveField(3)
   String? get total => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,7 +65,11 @@ abstract class $DelegateForgedCopyWith<$Res> {
   factory $DelegateForgedCopyWith(
           DelegateForged value, $Res Function(DelegateForged) then) =
       _$DelegateForgedCopyWithImpl<$Res>;
-  $Res call({String? fees, String? burnedFees, String? rewards, String? total});
+  $Res call(
+      {@HiveField(0) String? fees,
+      @HiveField(1) String? burnedFees,
+      @HiveField(2) String? rewards,
+      @HiveField(3) String? total});
 }
 
 /// @nodoc
@@ -105,7 +116,11 @@ abstract class _$DelegateForgedCopyWith<$Res>
           _DelegateForged value, $Res Function(_DelegateForged) then) =
       __$DelegateForgedCopyWithImpl<$Res>;
   @override
-  $Res call({String? fees, String? burnedFees, String? rewards, String? total});
+  $Res call(
+      {@HiveField(0) String? fees,
+      @HiveField(1) String? burnedFees,
+      @HiveField(2) String? rewards,
+      @HiveField(3) String? total});
 }
 
 /// @nodoc
@@ -150,18 +165,26 @@ class __$DelegateForgedCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DelegateForged implements _DelegateForged {
-  _$_DelegateForged({this.fees, this.burnedFees, this.rewards, this.total});
+  _$_DelegateForged(
+      {@HiveField(0) this.fees,
+      @HiveField(1) this.burnedFees,
+      @HiveField(2) this.rewards,
+      @HiveField(3) this.total});
 
   factory _$_DelegateForged.fromJson(Map<String, dynamic> json) =>
       _$$_DelegateForgedFromJson(json);
 
   @override
+  @HiveField(0)
   final String? fees;
   @override
+  @HiveField(1)
   final String? burnedFees;
   @override
+  @HiveField(2)
   final String? rewards;
   @override
+  @HiveField(3)
   final String? total;
 
   @override
@@ -202,21 +225,25 @@ class _$_DelegateForged implements _DelegateForged {
 
 abstract class _DelegateForged implements DelegateForged {
   factory _DelegateForged(
-      {String? fees,
-      String? burnedFees,
-      String? rewards,
-      String? total}) = _$_DelegateForged;
+      {@HiveField(0) String? fees,
+      @HiveField(1) String? burnedFees,
+      @HiveField(2) String? rewards,
+      @HiveField(3) String? total}) = _$_DelegateForged;
 
   factory _DelegateForged.fromJson(Map<String, dynamic> json) =
       _$_DelegateForged.fromJson;
 
   @override
+  @HiveField(0)
   String? get fees;
   @override
+  @HiveField(1)
   String? get burnedFees;
   @override
+  @HiveField(2)
   String? get rewards;
   @override
+  @HiveField(3)
   String? get total;
   @override
   @JsonKey(ignore: true)

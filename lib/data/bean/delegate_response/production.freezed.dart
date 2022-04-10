@@ -22,7 +22,7 @@ Production _$ProductionFromJson(Map<String, dynamic> json) {
 class _$ProductionTearOff {
   const _$ProductionTearOff();
 
-  _Production call({double? approval}) {
+  _Production call({@HiveField(0) double? approval}) {
     return _Production(
       approval: approval,
     );
@@ -38,6 +38,7 @@ const $Production = _$ProductionTearOff();
 
 /// @nodoc
 mixin _$Production {
+  @HiveField(0)
   double? get approval => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,7 +52,7 @@ abstract class $ProductionCopyWith<$Res> {
   factory $ProductionCopyWith(
           Production value, $Res Function(Production) then) =
       _$ProductionCopyWithImpl<$Res>;
-  $Res call({double? approval});
+  $Res call({@HiveField(0) double? approval});
 }
 
 /// @nodoc
@@ -81,7 +82,7 @@ abstract class _$ProductionCopyWith<$Res> implements $ProductionCopyWith<$Res> {
           _Production value, $Res Function(_Production) then) =
       __$ProductionCopyWithImpl<$Res>;
   @override
-  $Res call({double? approval});
+  $Res call({@HiveField(0) double? approval});
 }
 
 /// @nodoc
@@ -110,12 +111,13 @@ class __$ProductionCopyWithImpl<$Res> extends _$ProductionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Production implements _Production {
-  _$_Production({this.approval});
+  _$_Production({@HiveField(0) this.approval});
 
   factory _$_Production.fromJson(Map<String, dynamic> json) =>
       _$$_ProductionFromJson(json);
 
   @override
+  @HiveField(0)
   final double? approval;
 
   @override
@@ -147,12 +149,13 @@ class _$_Production implements _Production {
 }
 
 abstract class _Production implements Production {
-  factory _Production({double? approval}) = _$_Production;
+  factory _Production({@HiveField(0) double? approval}) = _$_Production;
 
   factory _Production.fromJson(Map<String, dynamic> json) =
       _$_Production.fromJson;
 
   @override
+  @HiveField(0)
   double? get approval;
   @override
   @JsonKey(ignore: true)

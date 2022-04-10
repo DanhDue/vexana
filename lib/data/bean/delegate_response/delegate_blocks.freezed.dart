@@ -23,8 +23,11 @@ class _$DelegateBlocksTearOff {
   const _$DelegateBlocksTearOff();
 
   _DelegateBlocks call(
-      {int? produced,
-      @JsonKey(name: 'last') DelegateLastBlock? delegateLastBlock}) {
+      {@HiveField(0)
+          int? produced,
+      @JsonKey(name: 'last')
+      @HiveField(1)
+          DelegateLastBlock? delegateLastBlock}) {
     return _DelegateBlocks(
       produced: produced,
       delegateLastBlock: delegateLastBlock,
@@ -41,8 +44,10 @@ const $DelegateBlocks = _$DelegateBlocksTearOff();
 
 /// @nodoc
 mixin _$DelegateBlocks {
+  @HiveField(0)
   int? get produced => throw _privateConstructorUsedError;
   @JsonKey(name: 'last')
+  @HiveField(1)
   DelegateLastBlock? get delegateLastBlock =>
       throw _privateConstructorUsedError;
 
@@ -58,8 +63,11 @@ abstract class $DelegateBlocksCopyWith<$Res> {
           DelegateBlocks value, $Res Function(DelegateBlocks) then) =
       _$DelegateBlocksCopyWithImpl<$Res>;
   $Res call(
-      {int? produced,
-      @JsonKey(name: 'last') DelegateLastBlock? delegateLastBlock});
+      {@HiveField(0)
+          int? produced,
+      @JsonKey(name: 'last')
+      @HiveField(1)
+          DelegateLastBlock? delegateLastBlock});
 
   $DelegateLastBlockCopyWith<$Res>? get delegateLastBlock;
 }
@@ -110,8 +118,11 @@ abstract class _$DelegateBlocksCopyWith<$Res>
       __$DelegateBlocksCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? produced,
-      @JsonKey(name: 'last') DelegateLastBlock? delegateLastBlock});
+      {@HiveField(0)
+          int? produced,
+      @JsonKey(name: 'last')
+      @HiveField(1)
+          DelegateLastBlock? delegateLastBlock});
 
   @override
   $DelegateLastBlockCopyWith<$Res>? get delegateLastBlock;
@@ -150,15 +161,18 @@ class __$DelegateBlocksCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DelegateBlocks implements _DelegateBlocks {
   _$_DelegateBlocks(
-      {this.produced, @JsonKey(name: 'last') this.delegateLastBlock});
+      {@HiveField(0) this.produced,
+      @JsonKey(name: 'last') @HiveField(1) this.delegateLastBlock});
 
   factory _$_DelegateBlocks.fromJson(Map<String, dynamic> json) =>
       _$$_DelegateBlocksFromJson(json);
 
   @override
+  @HiveField(0)
   final int? produced;
   @override
   @JsonKey(name: 'last')
+  @HiveField(1)
   final DelegateLastBlock? delegateLastBlock;
 
   @override
@@ -195,17 +209,21 @@ class _$_DelegateBlocks implements _DelegateBlocks {
 
 abstract class _DelegateBlocks implements DelegateBlocks {
   factory _DelegateBlocks(
-          {int? produced,
-          @JsonKey(name: 'last') DelegateLastBlock? delegateLastBlock}) =
-      _$_DelegateBlocks;
+      {@HiveField(0)
+          int? produced,
+      @JsonKey(name: 'last')
+      @HiveField(1)
+          DelegateLastBlock? delegateLastBlock}) = _$_DelegateBlocks;
 
   factory _DelegateBlocks.fromJson(Map<String, dynamic> json) =
       _$_DelegateBlocks.fromJson;
 
   @override
+  @HiveField(0)
   int? get produced;
   @override
   @JsonKey(name: 'last')
+  @HiveField(1)
   DelegateLastBlock? get delegateLastBlock;
   @override
   @JsonKey(ignore: true)

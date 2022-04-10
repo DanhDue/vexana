@@ -23,8 +23,8 @@ class _$WalletAttrsTearOff {
   const _$WalletAttrsTearOff();
 
   _WalletAttrs call(
-      {@JsonKey(name: 'delegate') WalletDelegate? walletDelegate,
-      String? vote}) {
+      {@JsonKey(name: 'delegate') @HiveField(0) WalletDelegate? walletDelegate,
+      @HiveField(1) String? vote}) {
     return _WalletAttrs(
       walletDelegate: walletDelegate,
       vote: vote,
@@ -42,7 +42,9 @@ const $WalletAttrs = _$WalletAttrsTearOff();
 /// @nodoc
 mixin _$WalletAttrs {
   @JsonKey(name: 'delegate')
+  @HiveField(0)
   WalletDelegate? get walletDelegate => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get vote => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,8 +59,8 @@ abstract class $WalletAttrsCopyWith<$Res> {
           WalletAttrs value, $Res Function(WalletAttrs) then) =
       _$WalletAttrsCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'delegate') WalletDelegate? walletDelegate,
-      String? vote});
+      {@JsonKey(name: 'delegate') @HiveField(0) WalletDelegate? walletDelegate,
+      @HiveField(1) String? vote});
 
   $WalletDelegateCopyWith<$Res>? get walletDelegate;
 }
@@ -108,8 +110,8 @@ abstract class _$WalletAttrsCopyWith<$Res>
       __$WalletAttrsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'delegate') WalletDelegate? walletDelegate,
-      String? vote});
+      {@JsonKey(name: 'delegate') @HiveField(0) WalletDelegate? walletDelegate,
+      @HiveField(1) String? vote});
 
   @override
   $WalletDelegateCopyWith<$Res>? get walletDelegate;
@@ -146,15 +148,19 @@ class __$WalletAttrsCopyWithImpl<$Res> extends _$WalletAttrsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_WalletAttrs implements _WalletAttrs {
-  _$_WalletAttrs({@JsonKey(name: 'delegate') this.walletDelegate, this.vote});
+  _$_WalletAttrs(
+      {@JsonKey(name: 'delegate') @HiveField(0) this.walletDelegate,
+      @HiveField(1) this.vote});
 
   factory _$_WalletAttrs.fromJson(Map<String, dynamic> json) =>
       _$$_WalletAttrsFromJson(json);
 
   @override
   @JsonKey(name: 'delegate')
+  @HiveField(0)
   final WalletDelegate? walletDelegate;
   @override
+  @HiveField(1)
   final String? vote;
 
   @override
@@ -191,16 +197,18 @@ class _$_WalletAttrs implements _WalletAttrs {
 
 abstract class _WalletAttrs implements WalletAttrs {
   factory _WalletAttrs(
-      {@JsonKey(name: 'delegate') WalletDelegate? walletDelegate,
-      String? vote}) = _$_WalletAttrs;
+      {@JsonKey(name: 'delegate') @HiveField(0) WalletDelegate? walletDelegate,
+      @HiveField(1) String? vote}) = _$_WalletAttrs;
 
   factory _WalletAttrs.fromJson(Map<String, dynamic> json) =
       _$_WalletAttrs.fromJson;
 
   @override
   @JsonKey(name: 'delegate')
+  @HiveField(0)
   WalletDelegate? get walletDelegate;
   @override
+  @HiveField(1)
   String? get vote;
   @override
   @JsonKey(ignore: true)

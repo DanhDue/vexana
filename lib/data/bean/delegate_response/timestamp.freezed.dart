@@ -22,7 +22,10 @@ Timestamp _$TimestampFromJson(Map<String, dynamic> json) {
 class _$TimestampTearOff {
   const _$TimestampTearOff();
 
-  _Timestamp call({int? epoch, int? unix, String? human}) {
+  _Timestamp call(
+      {@HiveField(0) int? epoch,
+      @HiveField(1) int? unix,
+      @HiveField(2) String? human}) {
     return _Timestamp(
       epoch: epoch,
       unix: unix,
@@ -40,8 +43,11 @@ const $Timestamp = _$TimestampTearOff();
 
 /// @nodoc
 mixin _$Timestamp {
+  @HiveField(0)
   int? get epoch => throw _privateConstructorUsedError;
+  @HiveField(1)
   int? get unix => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get human => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -54,7 +60,10 @@ mixin _$Timestamp {
 abstract class $TimestampCopyWith<$Res> {
   factory $TimestampCopyWith(Timestamp value, $Res Function(Timestamp) then) =
       _$TimestampCopyWithImpl<$Res>;
-  $Res call({int? epoch, int? unix, String? human});
+  $Res call(
+      {@HiveField(0) int? epoch,
+      @HiveField(1) int? unix,
+      @HiveField(2) String? human});
 }
 
 /// @nodoc
@@ -94,7 +103,10 @@ abstract class _$TimestampCopyWith<$Res> implements $TimestampCopyWith<$Res> {
           _Timestamp value, $Res Function(_Timestamp) then) =
       __$TimestampCopyWithImpl<$Res>;
   @override
-  $Res call({int? epoch, int? unix, String? human});
+  $Res call(
+      {@HiveField(0) int? epoch,
+      @HiveField(1) int? unix,
+      @HiveField(2) String? human});
 }
 
 /// @nodoc
@@ -132,16 +144,22 @@ class __$TimestampCopyWithImpl<$Res> extends _$TimestampCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Timestamp implements _Timestamp {
-  _$_Timestamp({this.epoch, this.unix, this.human});
+  _$_Timestamp(
+      {@HiveField(0) this.epoch,
+      @HiveField(1) this.unix,
+      @HiveField(2) this.human});
 
   factory _$_Timestamp.fromJson(Map<String, dynamic> json) =>
       _$$_TimestampFromJson(json);
 
   @override
+  @HiveField(0)
   final int? epoch;
   @override
+  @HiveField(1)
   final int? unix;
   @override
+  @HiveField(2)
   final String? human;
 
   @override
@@ -178,16 +196,22 @@ class _$_Timestamp implements _Timestamp {
 }
 
 abstract class _Timestamp implements Timestamp {
-  factory _Timestamp({int? epoch, int? unix, String? human}) = _$_Timestamp;
+  factory _Timestamp(
+      {@HiveField(0) int? epoch,
+      @HiveField(1) int? unix,
+      @HiveField(2) String? human}) = _$_Timestamp;
 
   factory _Timestamp.fromJson(Map<String, dynamic> json) =
       _$_Timestamp.fromJson;
 
   @override
+  @HiveField(0)
   int? get epoch;
   @override
+  @HiveField(1)
   int? get unix;
   @override
+  @HiveField(2)
   String? get human;
   @override
   @JsonKey(ignore: true)

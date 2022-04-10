@@ -3,6 +3,71 @@
 part of 'wallet_delegate.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class WalletDelegateAdapter extends TypeAdapter<WalletDelegate> {
+  @override
+  final int typeId = 2;
+
+  @override
+  WalletDelegate read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return WalletDelegate(
+      username: fields[0] as String?,
+      voteBalance: fields[1] as String?,
+      forgedFees: fields[2] as String?,
+      burnedFees: fields[3] as String?,
+      forgedRewards: fields[4] as String?,
+      producedBlocks: fields[5] as int?,
+      rank: fields[6] as int?,
+      walletBlock: fields[7] as WalletBlock?,
+      round: fields[8] as int?,
+      version: fields[9] as String?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, WalletDelegate obj) {
+    writer
+      ..writeByte(10)
+      ..writeByte(0)
+      ..write(obj.username)
+      ..writeByte(1)
+      ..write(obj.voteBalance)
+      ..writeByte(2)
+      ..write(obj.forgedFees)
+      ..writeByte(3)
+      ..write(obj.burnedFees)
+      ..writeByte(4)
+      ..write(obj.forgedRewards)
+      ..writeByte(5)
+      ..write(obj.producedBlocks)
+      ..writeByte(6)
+      ..write(obj.rank)
+      ..writeByte(7)
+      ..write(obj.walletBlock)
+      ..writeByte(8)
+      ..write(obj.round)
+      ..writeByte(9)
+      ..write(obj.version);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is WalletDelegateAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

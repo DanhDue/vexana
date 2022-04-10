@@ -23,22 +23,22 @@ class _$WalletBlockTearOff {
   const _$WalletBlockTearOff();
 
   _WalletBlock call(
-      {int? version,
-      int? timestamp,
-      int? height,
-      String? previousBlockHex,
-      String? previousBlock,
-      int? numberOfTransactions,
-      String? totalAmount,
-      String? totalFee,
-      String? reward,
-      int? payloadLength,
-      String? payloadHash,
-      String? generatorPublicKey,
-      String? blockSignature,
-      String? idHex,
-      String? id,
-      String? burnedFee}) {
+      {@HiveField(0) int? version,
+      @HiveField(1) int? timestamp,
+      @HiveField(2) int? height,
+      @HiveField(3) String? previousBlockHex,
+      @HiveField(4) String? previousBlock,
+      @HiveField(5) int? numberOfTransactions,
+      @HiveField(6) String? totalAmount,
+      @HiveField(7) String? totalFee,
+      @HiveField(8) String? reward,
+      @HiveField(9) int? payloadLength,
+      @HiveField(10) String? payloadHash,
+      @HiveField(11) String? generatorPublicKey,
+      @HiveField(12) String? blockSignature,
+      @HiveField(13) String? idHex,
+      @HiveField(14) String? id,
+      @HiveField(15) String? burnedFee}) {
     return _WalletBlock(
       version: version,
       timestamp: timestamp,
@@ -69,21 +69,37 @@ const $WalletBlock = _$WalletBlockTearOff();
 
 /// @nodoc
 mixin _$WalletBlock {
+  @HiveField(0)
   int? get version => throw _privateConstructorUsedError;
+  @HiveField(1)
   int? get timestamp => throw _privateConstructorUsedError;
+  @HiveField(2)
   int? get height => throw _privateConstructorUsedError;
+  @HiveField(3)
   String? get previousBlockHex => throw _privateConstructorUsedError;
+  @HiveField(4)
   String? get previousBlock => throw _privateConstructorUsedError;
+  @HiveField(5)
   int? get numberOfTransactions => throw _privateConstructorUsedError;
+  @HiveField(6)
   String? get totalAmount => throw _privateConstructorUsedError;
+  @HiveField(7)
   String? get totalFee => throw _privateConstructorUsedError;
+  @HiveField(8)
   String? get reward => throw _privateConstructorUsedError;
+  @HiveField(9)
   int? get payloadLength => throw _privateConstructorUsedError;
+  @HiveField(10)
   String? get payloadHash => throw _privateConstructorUsedError;
+  @HiveField(11)
   String? get generatorPublicKey => throw _privateConstructorUsedError;
+  @HiveField(12)
   String? get blockSignature => throw _privateConstructorUsedError;
+  @HiveField(13)
   String? get idHex => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(15)
   String? get burnedFee => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -98,22 +114,22 @@ abstract class $WalletBlockCopyWith<$Res> {
           WalletBlock value, $Res Function(WalletBlock) then) =
       _$WalletBlockCopyWithImpl<$Res>;
   $Res call(
-      {int? version,
-      int? timestamp,
-      int? height,
-      String? previousBlockHex,
-      String? previousBlock,
-      int? numberOfTransactions,
-      String? totalAmount,
-      String? totalFee,
-      String? reward,
-      int? payloadLength,
-      String? payloadHash,
-      String? generatorPublicKey,
-      String? blockSignature,
-      String? idHex,
-      String? id,
-      String? burnedFee});
+      {@HiveField(0) int? version,
+      @HiveField(1) int? timestamp,
+      @HiveField(2) int? height,
+      @HiveField(3) String? previousBlockHex,
+      @HiveField(4) String? previousBlock,
+      @HiveField(5) int? numberOfTransactions,
+      @HiveField(6) String? totalAmount,
+      @HiveField(7) String? totalFee,
+      @HiveField(8) String? reward,
+      @HiveField(9) int? payloadLength,
+      @HiveField(10) String? payloadHash,
+      @HiveField(11) String? generatorPublicKey,
+      @HiveField(12) String? blockSignature,
+      @HiveField(13) String? idHex,
+      @HiveField(14) String? id,
+      @HiveField(15) String? burnedFee});
 }
 
 /// @nodoc
@@ -220,22 +236,22 @@ abstract class _$WalletBlockCopyWith<$Res>
       __$WalletBlockCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? version,
-      int? timestamp,
-      int? height,
-      String? previousBlockHex,
-      String? previousBlock,
-      int? numberOfTransactions,
-      String? totalAmount,
-      String? totalFee,
-      String? reward,
-      int? payloadLength,
-      String? payloadHash,
-      String? generatorPublicKey,
-      String? blockSignature,
-      String? idHex,
-      String? id,
-      String? burnedFee});
+      {@HiveField(0) int? version,
+      @HiveField(1) int? timestamp,
+      @HiveField(2) int? height,
+      @HiveField(3) String? previousBlockHex,
+      @HiveField(4) String? previousBlock,
+      @HiveField(5) int? numberOfTransactions,
+      @HiveField(6) String? totalAmount,
+      @HiveField(7) String? totalFee,
+      @HiveField(8) String? reward,
+      @HiveField(9) int? payloadLength,
+      @HiveField(10) String? payloadHash,
+      @HiveField(11) String? generatorPublicKey,
+      @HiveField(12) String? blockSignature,
+      @HiveField(13) String? idHex,
+      @HiveField(14) String? id,
+      @HiveField(15) String? burnedFee});
 }
 
 /// @nodoc
@@ -340,57 +356,73 @@ class __$WalletBlockCopyWithImpl<$Res> extends _$WalletBlockCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WalletBlock implements _WalletBlock {
   _$_WalletBlock(
-      {this.version,
-      this.timestamp,
-      this.height,
-      this.previousBlockHex,
-      this.previousBlock,
-      this.numberOfTransactions,
-      this.totalAmount,
-      this.totalFee,
-      this.reward,
-      this.payloadLength,
-      this.payloadHash,
-      this.generatorPublicKey,
-      this.blockSignature,
-      this.idHex,
-      this.id,
-      this.burnedFee});
+      {@HiveField(0) this.version,
+      @HiveField(1) this.timestamp,
+      @HiveField(2) this.height,
+      @HiveField(3) this.previousBlockHex,
+      @HiveField(4) this.previousBlock,
+      @HiveField(5) this.numberOfTransactions,
+      @HiveField(6) this.totalAmount,
+      @HiveField(7) this.totalFee,
+      @HiveField(8) this.reward,
+      @HiveField(9) this.payloadLength,
+      @HiveField(10) this.payloadHash,
+      @HiveField(11) this.generatorPublicKey,
+      @HiveField(12) this.blockSignature,
+      @HiveField(13) this.idHex,
+      @HiveField(14) this.id,
+      @HiveField(15) this.burnedFee});
 
   factory _$_WalletBlock.fromJson(Map<String, dynamic> json) =>
       _$$_WalletBlockFromJson(json);
 
   @override
+  @HiveField(0)
   final int? version;
   @override
+  @HiveField(1)
   final int? timestamp;
   @override
+  @HiveField(2)
   final int? height;
   @override
+  @HiveField(3)
   final String? previousBlockHex;
   @override
+  @HiveField(4)
   final String? previousBlock;
   @override
+  @HiveField(5)
   final int? numberOfTransactions;
   @override
+  @HiveField(6)
   final String? totalAmount;
   @override
+  @HiveField(7)
   final String? totalFee;
   @override
+  @HiveField(8)
   final String? reward;
   @override
+  @HiveField(9)
   final int? payloadLength;
   @override
+  @HiveField(10)
   final String? payloadHash;
   @override
+  @HiveField(11)
   final String? generatorPublicKey;
   @override
+  @HiveField(12)
   final String? blockSignature;
   @override
+  @HiveField(13)
   final String? idHex;
   @override
+  @HiveField(14)
   final String? id;
   @override
+  @HiveField(15)
   final String? burnedFee;
 
   @override
@@ -462,57 +494,73 @@ class _$_WalletBlock implements _WalletBlock {
 
 abstract class _WalletBlock implements WalletBlock {
   factory _WalletBlock(
-      {int? version,
-      int? timestamp,
-      int? height,
-      String? previousBlockHex,
-      String? previousBlock,
-      int? numberOfTransactions,
-      String? totalAmount,
-      String? totalFee,
-      String? reward,
-      int? payloadLength,
-      String? payloadHash,
-      String? generatorPublicKey,
-      String? blockSignature,
-      String? idHex,
-      String? id,
-      String? burnedFee}) = _$_WalletBlock;
+      {@HiveField(0) int? version,
+      @HiveField(1) int? timestamp,
+      @HiveField(2) int? height,
+      @HiveField(3) String? previousBlockHex,
+      @HiveField(4) String? previousBlock,
+      @HiveField(5) int? numberOfTransactions,
+      @HiveField(6) String? totalAmount,
+      @HiveField(7) String? totalFee,
+      @HiveField(8) String? reward,
+      @HiveField(9) int? payloadLength,
+      @HiveField(10) String? payloadHash,
+      @HiveField(11) String? generatorPublicKey,
+      @HiveField(12) String? blockSignature,
+      @HiveField(13) String? idHex,
+      @HiveField(14) String? id,
+      @HiveField(15) String? burnedFee}) = _$_WalletBlock;
 
   factory _WalletBlock.fromJson(Map<String, dynamic> json) =
       _$_WalletBlock.fromJson;
 
   @override
+  @HiveField(0)
   int? get version;
   @override
+  @HiveField(1)
   int? get timestamp;
   @override
+  @HiveField(2)
   int? get height;
   @override
+  @HiveField(3)
   String? get previousBlockHex;
   @override
+  @HiveField(4)
   String? get previousBlock;
   @override
+  @HiveField(5)
   int? get numberOfTransactions;
   @override
+  @HiveField(6)
   String? get totalAmount;
   @override
+  @HiveField(7)
   String? get totalFee;
   @override
+  @HiveField(8)
   String? get reward;
   @override
+  @HiveField(9)
   int? get payloadLength;
   @override
+  @HiveField(10)
   String? get payloadHash;
   @override
+  @HiveField(11)
   String? get generatorPublicKey;
   @override
+  @HiveField(12)
   String? get blockSignature;
   @override
+  @HiveField(13)
   String? get idHex;
   @override
+  @HiveField(14)
   String? get id;
   @override
+  @HiveField(15)
   String? get burnedFee;
   @override
   @JsonKey(ignore: true)
