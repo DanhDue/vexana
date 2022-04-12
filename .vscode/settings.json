@@ -1,6 +1,13 @@
 {
     "files.exclude": {
-        "**/lib/data/bean/**/**.freezed.dart": true,
-        "**/lib/data/bean/**/**.g.dart": true
+      "**/lib/data/bean/**/**.freezed.dart": true,
+      "**/lib/data/bean/**/**.g.dart": true
+    },
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    "search.exclude": {
+      "**/.fvm": true
+    },
+    "files.watcherExclude": {
+      "**/.fvm": true
     }
 }
