@@ -30,7 +30,7 @@ class _$WalletDelegateTearOff {
       @HiveField(4) String? forgedRewards,
       @HiveField(5) int? producedBlocks,
       @HiveField(6) int? rank,
-      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @JsonKey(name: 'lastBlock') @HiveField(7) String? walletBlock,
       @HiveField(8) int? round,
       @HiveField(9) String? version}) {
     return _WalletDelegate(
@@ -70,10 +70,11 @@ mixin _$WalletDelegate {
   @HiveField(5)
   int? get producedBlocks => throw _privateConstructorUsedError;
   @HiveField(6)
-  int? get rank => throw _privateConstructorUsedError;
+  int? get rank =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
   @JsonKey(name: 'lastBlock')
   @HiveField(7)
-  WalletBlock? get walletBlock => throw _privateConstructorUsedError;
+  String? get walletBlock => throw _privateConstructorUsedError;
   @HiveField(8)
   int? get round => throw _privateConstructorUsedError;
   @HiveField(9)
@@ -98,11 +99,9 @@ abstract class $WalletDelegateCopyWith<$Res> {
       @HiveField(4) String? forgedRewards,
       @HiveField(5) int? producedBlocks,
       @HiveField(6) int? rank,
-      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @JsonKey(name: 'lastBlock') @HiveField(7) String? walletBlock,
       @HiveField(8) int? round,
       @HiveField(9) String? version});
-
-  $WalletBlockCopyWith<$Res>? get walletBlock;
 }
 
 /// @nodoc
@@ -159,7 +158,7 @@ class _$WalletDelegateCopyWithImpl<$Res>
       walletBlock: walletBlock == freezed
           ? _value.walletBlock
           : walletBlock // ignore: cast_nullable_to_non_nullable
-              as WalletBlock?,
+              as String?,
       round: round == freezed
           ? _value.round
           : round // ignore: cast_nullable_to_non_nullable
@@ -169,17 +168,6 @@ class _$WalletDelegateCopyWithImpl<$Res>
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
-  }
-
-  @override
-  $WalletBlockCopyWith<$Res>? get walletBlock {
-    if (_value.walletBlock == null) {
-      return null;
-    }
-
-    return $WalletBlockCopyWith<$Res>(_value.walletBlock!, (value) {
-      return _then(_value.copyWith(walletBlock: value));
-    });
   }
 }
 
@@ -198,12 +186,9 @@ abstract class _$WalletDelegateCopyWith<$Res>
       @HiveField(4) String? forgedRewards,
       @HiveField(5) int? producedBlocks,
       @HiveField(6) int? rank,
-      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @JsonKey(name: 'lastBlock') @HiveField(7) String? walletBlock,
       @HiveField(8) int? round,
       @HiveField(9) String? version});
-
-  @override
-  $WalletBlockCopyWith<$Res>? get walletBlock;
 }
 
 /// @nodoc
@@ -262,7 +247,7 @@ class __$WalletDelegateCopyWithImpl<$Res>
       walletBlock: walletBlock == freezed
           ? _value.walletBlock
           : walletBlock // ignore: cast_nullable_to_non_nullable
-              as WalletBlock?,
+              as String?,
       round: round == freezed
           ? _value.round
           : round // ignore: cast_nullable_to_non_nullable
@@ -314,10 +299,10 @@ class _$_WalletDelegate implements _WalletDelegate {
   @override
   @HiveField(6)
   final int? rank;
-  @override
+  @override // @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
   @JsonKey(name: 'lastBlock')
   @HiveField(7)
-  final WalletBlock? walletBlock;
+  final String? walletBlock;
   @override
   @HiveField(8)
   final int? round;
@@ -387,7 +372,7 @@ abstract class _WalletDelegate implements WalletDelegate {
       @HiveField(4) String? forgedRewards,
       @HiveField(5) int? producedBlocks,
       @HiveField(6) int? rank,
-      @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+      @JsonKey(name: 'lastBlock') @HiveField(7) String? walletBlock,
       @HiveField(8) int? round,
       @HiveField(9) String? version}) = _$_WalletDelegate;
 
@@ -415,10 +400,10 @@ abstract class _WalletDelegate implements WalletDelegate {
   @override
   @HiveField(6)
   int? get rank;
-  @override
+  @override // @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
   @JsonKey(name: 'lastBlock')
   @HiveField(7)
-  WalletBlock? get walletBlock;
+  String? get walletBlock;
   @override
   @HiveField(8)
   int? get round;

@@ -24,7 +24,7 @@ class WalletDelegateAdapter extends TypeAdapter<WalletDelegate> {
       forgedRewards: fields[4] as String?,
       producedBlocks: fields[5] as int?,
       rank: fields[6] as int?,
-      walletBlock: fields[7] as WalletBlock?,
+      walletBlock: fields[7] as String?,
       round: fields[8] as int?,
       version: fields[9] as String?,
     );
@@ -80,9 +80,7 @@ _$_WalletDelegate _$$_WalletDelegateFromJson(Map<String, dynamic> json) =>
       forgedRewards: json['forgedRewards'] as String?,
       producedBlocks: json['producedBlocks'] as int?,
       rank: json['rank'] as int?,
-      walletBlock: json['lastBlock'] == null
-          ? null
-          : WalletBlock.fromJson(json['lastBlock'] as Map<String, dynamic>),
+      walletBlock: json['lastBlock'] as String?,
       round: json['round'] as int?,
       version: json['version'] as String?,
     );
