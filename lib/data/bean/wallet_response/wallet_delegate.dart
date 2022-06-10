@@ -18,7 +18,8 @@ class WalletDelegate with _$WalletDelegate {
     @HiveField(4) String? forgedRewards,
     @HiveField(5) int? producedBlocks,
     @HiveField(6) int? rank,
-    @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+    // @JsonKey(name: 'lastBlock') @HiveField(7) WalletBlock? walletBlock,
+    @JsonKey(name: 'lastBlock') @HiveField(7) String? walletBlock,
     @HiveField(8) int? round,
     @HiveField(9) String? version,
   }) = _WalletDelegate;
