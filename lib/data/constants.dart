@@ -12,7 +12,9 @@ class Constants {
   static const delegateProductionAdapterName = 'DelegateProductionAdapter';
   static const delegateTimestampHiveTypeId = 9;
   static const delegateTimestampAdapterName = 'DelegateTimestampAdapter';
-
+  static const blockChainHiveTypeId = 10;
+  static const blockChainBlockdHiveTypeId = 11;
+  static const blockChainBurnedHiveTypeId = 12;
   static const walletBoxName = 'wallet';
   static const delegateBoxName = 'delegate';
 }
