@@ -23,11 +23,8 @@ class _$DelegateBlocksTearOff {
   const _$DelegateBlocksTearOff();
 
   _DelegateBlocks call(
-      {@HiveField(0)
-          int? produced,
-      @JsonKey(name: 'last')
-      @HiveField(1)
-          DelegateLastBlock? delegateLastBlock}) {
+      {@HiveField(0) int? produced,
+      @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock}) {
     return _DelegateBlocks(
       produced: produced,
       delegateLastBlock: delegateLastBlock,
@@ -48,8 +45,7 @@ mixin _$DelegateBlocks {
   int? get produced => throw _privateConstructorUsedError;
   @JsonKey(name: 'last')
   @HiveField(1)
-  DelegateLastBlock? get delegateLastBlock =>
-      throw _privateConstructorUsedError;
+  String? get delegateLastBlock => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,13 +59,8 @@ abstract class $DelegateBlocksCopyWith<$Res> {
           DelegateBlocks value, $Res Function(DelegateBlocks) then) =
       _$DelegateBlocksCopyWithImpl<$Res>;
   $Res call(
-      {@HiveField(0)
-          int? produced,
-      @JsonKey(name: 'last')
-      @HiveField(1)
-          DelegateLastBlock? delegateLastBlock});
-
-  $DelegateLastBlockCopyWith<$Res>? get delegateLastBlock;
+      {@HiveField(0) int? produced,
+      @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock});
 }
 
 /// @nodoc
@@ -94,19 +85,8 @@ class _$DelegateBlocksCopyWithImpl<$Res>
       delegateLastBlock: delegateLastBlock == freezed
           ? _value.delegateLastBlock
           : delegateLastBlock // ignore: cast_nullable_to_non_nullable
-              as DelegateLastBlock?,
+              as String?,
     ));
-  }
-
-  @override
-  $DelegateLastBlockCopyWith<$Res>? get delegateLastBlock {
-    if (_value.delegateLastBlock == null) {
-      return null;
-    }
-
-    return $DelegateLastBlockCopyWith<$Res>(_value.delegateLastBlock!, (value) {
-      return _then(_value.copyWith(delegateLastBlock: value));
-    });
   }
 }
 
@@ -118,14 +98,8 @@ abstract class _$DelegateBlocksCopyWith<$Res>
       __$DelegateBlocksCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@HiveField(0)
-          int? produced,
-      @JsonKey(name: 'last')
-      @HiveField(1)
-          DelegateLastBlock? delegateLastBlock});
-
-  @override
-  $DelegateLastBlockCopyWith<$Res>? get delegateLastBlock;
+      {@HiveField(0) int? produced,
+      @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock});
 }
 
 /// @nodoc
@@ -152,7 +126,7 @@ class __$DelegateBlocksCopyWithImpl<$Res>
       delegateLastBlock: delegateLastBlock == freezed
           ? _value.delegateLastBlock
           : delegateLastBlock // ignore: cast_nullable_to_non_nullable
-              as DelegateLastBlock?,
+              as String?,
     ));
   }
 }
@@ -173,7 +147,7 @@ class _$_DelegateBlocks implements _DelegateBlocks {
   @override
   @JsonKey(name: 'last')
   @HiveField(1)
-  final DelegateLastBlock? delegateLastBlock;
+  final String? delegateLastBlock;
 
   @override
   String toString() {
@@ -209,11 +183,9 @@ class _$_DelegateBlocks implements _DelegateBlocks {
 
 abstract class _DelegateBlocks implements DelegateBlocks {
   factory _DelegateBlocks(
-      {@HiveField(0)
-          int? produced,
-      @JsonKey(name: 'last')
-      @HiveField(1)
-          DelegateLastBlock? delegateLastBlock}) = _$_DelegateBlocks;
+          {@HiveField(0) int? produced,
+          @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock}) =
+      _$_DelegateBlocks;
 
   factory _DelegateBlocks.fromJson(Map<String, dynamic> json) =
       _$_DelegateBlocks.fromJson;
@@ -224,7 +196,7 @@ abstract class _DelegateBlocks implements DelegateBlocks {
   @override
   @JsonKey(name: 'last')
   @HiveField(1)
-  DelegateLastBlock? get delegateLastBlock;
+  String? get delegateLastBlock;
   @override
   @JsonKey(ignore: true)
   _$DelegateBlocksCopyWith<_DelegateBlocks> get copyWith =>

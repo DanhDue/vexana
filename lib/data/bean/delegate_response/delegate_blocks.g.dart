@@ -18,7 +18,7 @@ class DelegateBlocksAdapter extends TypeAdapter<DelegateBlocks> {
     };
     return DelegateBlocks(
       produced: fields[0] as int?,
-      delegateLastBlock: fields[1] as DelegateLastBlock?,
+      delegateLastBlock: fields[1] as String?,
     );
   }
 
@@ -50,9 +50,7 @@ class DelegateBlocksAdapter extends TypeAdapter<DelegateBlocks> {
 _$_DelegateBlocks _$$_DelegateBlocksFromJson(Map<String, dynamic> json) =>
     _$_DelegateBlocks(
       produced: json['produced'] as int?,
-      delegateLastBlock: json['last'] == null
-          ? null
-          : DelegateLastBlock.fromJson(json['last'] as Map<String, dynamic>),
+      delegateLastBlock: json['last'] as String?,
     );
 
 Map<String, dynamic> _$$_DelegateBlocksToJson(_$_DelegateBlocks instance) =>

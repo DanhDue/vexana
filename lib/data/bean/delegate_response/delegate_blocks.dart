@@ -13,7 +13,7 @@ part 'delegate_blocks.g.dart';
 class DelegateBlocks with _$DelegateBlocks {
   factory DelegateBlocks({
     @HiveField(0) int? produced,
-    @JsonKey(name: 'last') @HiveField(1) DelegateLastBlock? delegateLastBlock,
+    @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock,
   }) = _DelegateBlocks;
 
   factory DelegateBlocks.fromJson(Map<String, dynamic> json) =>
