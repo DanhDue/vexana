@@ -17,7 +17,7 @@ class DelegateBlocksAdapter extends TypeAdapter<DelegateBlocks> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return DelegateBlocks(
-      produced: fields[0] as int?,
+      produced: fields[0] as double?,
       delegateLastBlock: fields[1] as String?,
     );
   }
@@ -49,7 +49,7 @@ class DelegateBlocksAdapter extends TypeAdapter<DelegateBlocks> {
 
 _$_DelegateBlocks _$$_DelegateBlocksFromJson(Map<String, dynamic> json) =>
     _$_DelegateBlocks(
-      produced: json['produced'] as int?,
+      produced: (json['produced'] as num?)?.toDouble(),
       delegateLastBlock: json['last'] as String?,
     );
 

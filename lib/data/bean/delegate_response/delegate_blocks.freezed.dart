@@ -23,7 +23,7 @@ class _$DelegateBlocksTearOff {
   const _$DelegateBlocksTearOff();
 
   _DelegateBlocks call(
-      {@HiveField(0) int? produced,
+      {@HiveField(0) double? produced,
       @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock}) {
     return _DelegateBlocks(
       produced: produced,
@@ -42,7 +42,7 @@ const $DelegateBlocks = _$DelegateBlocksTearOff();
 /// @nodoc
 mixin _$DelegateBlocks {
   @HiveField(0)
-  int? get produced => throw _privateConstructorUsedError;
+  double? get produced => throw _privateConstructorUsedError;
   @JsonKey(name: 'last')
   @HiveField(1)
   String? get delegateLastBlock => throw _privateConstructorUsedError;
@@ -59,7 +59,7 @@ abstract class $DelegateBlocksCopyWith<$Res> {
           DelegateBlocks value, $Res Function(DelegateBlocks) then) =
       _$DelegateBlocksCopyWithImpl<$Res>;
   $Res call(
-      {@HiveField(0) int? produced,
+      {@HiveField(0) double? produced,
       @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock});
 }
 
@@ -81,7 +81,7 @@ class _$DelegateBlocksCopyWithImpl<$Res>
       produced: produced == freezed
           ? _value.produced
           : produced // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       delegateLastBlock: delegateLastBlock == freezed
           ? _value.delegateLastBlock
           : delegateLastBlock // ignore: cast_nullable_to_non_nullable
@@ -98,7 +98,7 @@ abstract class _$DelegateBlocksCopyWith<$Res>
       __$DelegateBlocksCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@HiveField(0) int? produced,
+      {@HiveField(0) double? produced,
       @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock});
 }
 
@@ -122,7 +122,7 @@ class __$DelegateBlocksCopyWithImpl<$Res>
       produced: produced == freezed
           ? _value.produced
           : produced // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       delegateLastBlock: delegateLastBlock == freezed
           ? _value.delegateLastBlock
           : delegateLastBlock // ignore: cast_nullable_to_non_nullable
@@ -143,7 +143,7 @@ class _$_DelegateBlocks implements _DelegateBlocks {
 
   @override
   @HiveField(0)
-  final int? produced;
+  final double? produced;
   @override
   @JsonKey(name: 'last')
   @HiveField(1)
@@ -183,7 +183,7 @@ class _$_DelegateBlocks implements _DelegateBlocks {
 
 abstract class _DelegateBlocks implements DelegateBlocks {
   factory _DelegateBlocks(
-          {@HiveField(0) int? produced,
+          {@HiveField(0) double? produced,
           @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock}) =
       _$_DelegateBlocks;
 
@@ -192,7 +192,7 @@ abstract class _DelegateBlocks implements DelegateBlocks {
 
   @override
   @HiveField(0)
-  int? get produced;
+  double? get produced;
   @override
   @JsonKey(name: 'last')
   @HiveField(1)

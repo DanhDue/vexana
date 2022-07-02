@@ -12,7 +12,7 @@ part 'delegate_blocks.g.dart';
 @HiveType(typeId: Constants.delegateBlockHiveTypeId)
 class DelegateBlocks with _$DelegateBlocks {
   factory DelegateBlocks({
-    @HiveField(0) int? produced,
+    @HiveField(0) double? produced,
     @JsonKey(name: 'last') @HiveField(1) String? delegateLastBlock,
   }) = _DelegateBlocks;
 
