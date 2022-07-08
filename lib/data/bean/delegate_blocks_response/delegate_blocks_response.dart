@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:vexana/data/bean/meta_data_object/meta_data_object.dart';
 
 import 'delegate_block.dart';
-import 'delegate_blocks_meta.dart';
 import 'package:vexana/vexana.dart';
 
 part 'delegate_blocks_response.freezed.dart';
@@ -11,7 +11,7 @@ part 'delegate_blocks_response.g.dart';
 class DelegateBlocksResponse extends INetworkModel<DelegateBlocksResponse>
     with _$DelegateBlocksResponse {
   factory DelegateBlocksResponse({
-    @JsonKey(name: 'meta') DelegateBlocksMeta? delegateBlocksMeta,
+    @JsonKey(name: 'meta') MetaDataObject? delegateBlocksMeta,
     @JsonKey(name: 'data') List<DelegateBlock>? delegateBlocks,
   }) = _DelegateBlocksResponse;
 

@@ -15,6 +15,8 @@ class Constants {
   static const blockChainHiveTypeId = 10;
   static const blockChainBlockdHiveTypeId = 11;
   static const blockChainBurnedHiveTypeId = 12;
+  static const receivedVotesHiveTypeId = 13;
+  static const receivedVotesAdapterName = 'ReceivedVotesAdapter';
   static const walletBoxName = 'wallet';
   static const delegateBoxName = 'delegate';
 }

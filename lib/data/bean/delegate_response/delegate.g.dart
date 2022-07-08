@@ -20,7 +20,7 @@ class DelegateAdapter extends TypeAdapter<Delegate> {
       username: fields[0] as String?,
       address: fields[1] as String?,
       publicKey: fields[2] as String?,
-      votes: fields[3] as String?,
+      votes: fields[3] as ReceivedVotes?,
       rank: fields[4] as int?,
       isResigned: fields[5] as bool?,
       delegateBlocks: fields[6] as DelegateBlocks?,
@@ -75,7 +75,9 @@ _$_Delegate _$$_DelegateFromJson(Map<String, dynamic> json) => _$_Delegate(
       username: json['username'] as String?,
       address: json['address'] as String?,
       publicKey: json['publicKey'] as String?,
-      votes: json['votes'] as String?,
+      votes: json['votes'] == null
+          ? null
+          : ReceivedVotes.fromJson(json['votes'] as Map<String, dynamic>),
       rank: json['rank'] as int?,
       isResigned: json['isResigned'] as bool?,
       delegateBlocks: json['blocks'] == null

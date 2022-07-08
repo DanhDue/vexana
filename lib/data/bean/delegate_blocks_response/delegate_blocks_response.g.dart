@@ -11,7 +11,7 @@ _$_DelegateBlocksResponse _$$_DelegateBlocksResponseFromJson(
     _$_DelegateBlocksResponse(
       delegateBlocksMeta: json['meta'] == null
           ? null
-          : DelegateBlocksMeta.fromJson(json['meta'] as Map<String, dynamic>),
+          : MetaDataObject.fromJson(json['meta'] as Map<String, dynamic>),
       delegateBlocks: (json['data'] as List<dynamic>?)
           ?.map((e) => DelegateBlock.fromJson(e as Map<String, dynamic>))
           .toList(),

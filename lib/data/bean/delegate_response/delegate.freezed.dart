@@ -26,7 +26,7 @@ class _$DelegateTearOff {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) String? votes,
+      @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -64,7 +64,7 @@ mixin _$Delegate {
   @HiveField(2)
   String? get publicKey => throw _privateConstructorUsedError;
   @HiveField(3)
-  String? get votes => throw _privateConstructorUsedError;
+  ReceivedVotes? get votes => throw _privateConstructorUsedError;
   @HiveField(4)
   int? get rank => throw _privateConstructorUsedError;
   @HiveField(5)
@@ -94,7 +94,7 @@ abstract class $DelegateCopyWith<$Res> {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) String? votes,
+      @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -102,6 +102,7 @@ abstract class $DelegateCopyWith<$Res> {
       @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
       @HiveField(9) String? version});
 
+  $ReceivedVotesCopyWith<$Res>? get votes;
   $DelegateBlocksCopyWith<$Res>? get delegateBlocks;
   $ProductionCopyWith<$Res>? get production;
   $DelegateForgedCopyWith<$Res>? get delegateForged;
@@ -144,7 +145,7 @@ class _$DelegateCopyWithImpl<$Res> implements $DelegateCopyWith<$Res> {
       votes: votes == freezed
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ReceivedVotes?,
       rank: rank == freezed
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
@@ -170,6 +171,17 @@ class _$DelegateCopyWithImpl<$Res> implements $DelegateCopyWith<$Res> {
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  @override
+  $ReceivedVotesCopyWith<$Res>? get votes {
+    if (_value.votes == null) {
+      return null;
+    }
+
+    return $ReceivedVotesCopyWith<$Res>(_value.votes!, (value) {
+      return _then(_value.copyWith(votes: value));
+    });
   }
 
   @override
@@ -215,7 +227,7 @@ abstract class _$DelegateCopyWith<$Res> implements $DelegateCopyWith<$Res> {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) String? votes,
+      @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -223,6 +235,8 @@ abstract class _$DelegateCopyWith<$Res> implements $DelegateCopyWith<$Res> {
       @JsonKey(name: 'forged') @HiveField(8) DelegateForged? delegateForged,
       @HiveField(9) String? version});
 
+  @override
+  $ReceivedVotesCopyWith<$Res>? get votes;
   @override
   $DelegateBlocksCopyWith<$Res>? get delegateBlocks;
   @override
@@ -269,7 +283,7 @@ class __$DelegateCopyWithImpl<$Res> extends _$DelegateCopyWithImpl<$Res>
       votes: votes == freezed
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as ReceivedVotes?,
       rank: rank == freezed
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
@@ -327,7 +341,7 @@ class _$_Delegate implements _Delegate {
   final String? publicKey;
   @override
   @HiveField(3)
-  final String? votes;
+  final ReceivedVotes? votes;
   @override
   @HiveField(4)
   final int? rank;
@@ -405,7 +419,7 @@ abstract class _Delegate implements Delegate {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) String? votes,
+      @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -426,7 +440,7 @@ abstract class _Delegate implements Delegate {
   String? get publicKey;
   @override
   @HiveField(3)
-  String? get votes;
+  ReceivedVotes? get votes;
   @override
   @HiveField(4)
   int? get rank;

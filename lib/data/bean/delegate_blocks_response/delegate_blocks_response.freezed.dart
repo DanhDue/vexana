@@ -24,7 +24,7 @@ class _$DelegateBlocksResponseTearOff {
   const _$DelegateBlocksResponseTearOff();
 
   _DelegateBlocksResponse call(
-      {@JsonKey(name: 'meta') DelegateBlocksMeta? delegateBlocksMeta,
+      {@JsonKey(name: 'meta') MetaDataObject? delegateBlocksMeta,
       @JsonKey(name: 'data') List<DelegateBlock>? delegateBlocks}) {
     return _DelegateBlocksResponse(
       delegateBlocksMeta: delegateBlocksMeta,
@@ -43,8 +43,7 @@ const $DelegateBlocksResponse = _$DelegateBlocksResponseTearOff();
 /// @nodoc
 mixin _$DelegateBlocksResponse {
   @JsonKey(name: 'meta')
-  DelegateBlocksMeta? get delegateBlocksMeta =>
-      throw _privateConstructorUsedError;
+  MetaDataObject? get delegateBlocksMeta => throw _privateConstructorUsedError;
   @JsonKey(name: 'data')
   List<DelegateBlock>? get delegateBlocks => throw _privateConstructorUsedError;
 
@@ -60,10 +59,10 @@ abstract class $DelegateBlocksResponseCopyWith<$Res> {
           $Res Function(DelegateBlocksResponse) then) =
       _$DelegateBlocksResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'meta') DelegateBlocksMeta? delegateBlocksMeta,
+      {@JsonKey(name: 'meta') MetaDataObject? delegateBlocksMeta,
       @JsonKey(name: 'data') List<DelegateBlock>? delegateBlocks});
 
-  $DelegateBlocksMetaCopyWith<$Res>? get delegateBlocksMeta;
+  $MetaDataObjectCopyWith<$Res>? get delegateBlocksMeta;
 }
 
 /// @nodoc
@@ -84,7 +83,7 @@ class _$DelegateBlocksResponseCopyWithImpl<$Res>
       delegateBlocksMeta: delegateBlocksMeta == freezed
           ? _value.delegateBlocksMeta
           : delegateBlocksMeta // ignore: cast_nullable_to_non_nullable
-              as DelegateBlocksMeta?,
+              as MetaDataObject?,
       delegateBlocks: delegateBlocks == freezed
           ? _value.delegateBlocks
           : delegateBlocks // ignore: cast_nullable_to_non_nullable
@@ -93,13 +92,12 @@ class _$DelegateBlocksResponseCopyWithImpl<$Res>
   }
 
   @override
-  $DelegateBlocksMetaCopyWith<$Res>? get delegateBlocksMeta {
+  $MetaDataObjectCopyWith<$Res>? get delegateBlocksMeta {
     if (_value.delegateBlocksMeta == null) {
       return null;
     }
 
-    return $DelegateBlocksMetaCopyWith<$Res>(_value.delegateBlocksMeta!,
-        (value) {
+    return $MetaDataObjectCopyWith<$Res>(_value.delegateBlocksMeta!, (value) {
       return _then(_value.copyWith(delegateBlocksMeta: value));
     });
   }
@@ -113,11 +111,11 @@ abstract class _$DelegateBlocksResponseCopyWith<$Res>
       __$DelegateBlocksResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'meta') DelegateBlocksMeta? delegateBlocksMeta,
+      {@JsonKey(name: 'meta') MetaDataObject? delegateBlocksMeta,
       @JsonKey(name: 'data') List<DelegateBlock>? delegateBlocks});
 
   @override
-  $DelegateBlocksMetaCopyWith<$Res>? get delegateBlocksMeta;
+  $MetaDataObjectCopyWith<$Res>? get delegateBlocksMeta;
 }
 
 /// @nodoc
@@ -140,7 +138,7 @@ class __$DelegateBlocksResponseCopyWithImpl<$Res>
       delegateBlocksMeta: delegateBlocksMeta == freezed
           ? _value.delegateBlocksMeta
           : delegateBlocksMeta // ignore: cast_nullable_to_non_nullable
-              as DelegateBlocksMeta?,
+              as MetaDataObject?,
       delegateBlocks: delegateBlocks == freezed
           ? _value.delegateBlocks
           : delegateBlocks // ignore: cast_nullable_to_non_nullable
@@ -161,7 +159,7 @@ class _$_DelegateBlocksResponse implements _DelegateBlocksResponse {
 
   @override
   @JsonKey(name: 'meta')
-  final DelegateBlocksMeta? delegateBlocksMeta;
+  final MetaDataObject? delegateBlocksMeta;
   @override
   @JsonKey(name: 'data')
   final List<DelegateBlock>? delegateBlocks;
@@ -202,7 +200,7 @@ class _$_DelegateBlocksResponse implements _DelegateBlocksResponse {
 
 abstract class _DelegateBlocksResponse implements DelegateBlocksResponse {
   factory _DelegateBlocksResponse(
-          {@JsonKey(name: 'meta') DelegateBlocksMeta? delegateBlocksMeta,
+          {@JsonKey(name: 'meta') MetaDataObject? delegateBlocksMeta,
           @JsonKey(name: 'data') List<DelegateBlock>? delegateBlocks}) =
       _$_DelegateBlocksResponse;
 
@@ -211,7 +209,7 @@ abstract class _DelegateBlocksResponse implements DelegateBlocksResponse {
 
   @override
   @JsonKey(name: 'meta')
-  DelegateBlocksMeta? get delegateBlocksMeta;
+  MetaDataObject? get delegateBlocksMeta;
   @override
   @JsonKey(name: 'data')
   List<DelegateBlock>? get delegateBlocks;
