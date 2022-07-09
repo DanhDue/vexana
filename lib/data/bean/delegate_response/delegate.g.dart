@@ -75,9 +75,10 @@ _$_Delegate _$$_DelegateFromJson(Map<String, dynamic> json) => _$_Delegate(
       username: json['username'] as String?,
       address: json['address'] as String?,
       publicKey: json['publicKey'] as String?,
-      votes: json['votes'] == null
+      votes: json['votesReceived'] == null
           ? null
-          : ReceivedVotes.fromJson(json['votes'] as Map<String, dynamic>),
+          : ReceivedVotes.fromJson(
+              json['votesReceived'] as Map<String, dynamic>),
       rank: json['rank'] as int?,
       isResigned: json['isResigned'] as bool?,
       delegateBlocks: json['blocks'] == null
@@ -97,7 +98,7 @@ Map<String, dynamic> _$$_DelegateToJson(_$_Delegate instance) =>
       'username': instance.username,
       'address': instance.address,
       'publicKey': instance.publicKey,
-      'votes': instance.votes,
+      'votesReceived': instance.votes,
       'rank': instance.rank,
       'isResigned': instance.isResigned,
       'blocks': instance.delegateBlocks,

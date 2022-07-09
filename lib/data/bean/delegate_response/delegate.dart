@@ -17,7 +17,7 @@ class Delegate with _$Delegate {
     @HiveField(0) String? username,
     @HiveField(1) String? address,
     @HiveField(2) String? publicKey,
-    @HiveField(3) ReceivedVotes? votes,
+    @JsonKey(name: 'votesReceived') @HiveField(3) ReceivedVotes? votes,
     @HiveField(4) int? rank,
     @HiveField(5) bool? isResigned,
     @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,

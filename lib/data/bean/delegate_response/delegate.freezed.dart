@@ -26,7 +26,7 @@ class _$DelegateTearOff {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) ReceivedVotes? votes,
+      @JsonKey(name: 'votesReceived') @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -63,6 +63,7 @@ mixin _$Delegate {
   String? get address => throw _privateConstructorUsedError;
   @HiveField(2)
   String? get publicKey => throw _privateConstructorUsedError;
+  @JsonKey(name: 'votesReceived')
   @HiveField(3)
   ReceivedVotes? get votes => throw _privateConstructorUsedError;
   @HiveField(4)
@@ -94,7 +95,7 @@ abstract class $DelegateCopyWith<$Res> {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) ReceivedVotes? votes,
+      @JsonKey(name: 'votesReceived') @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -227,7 +228,7 @@ abstract class _$DelegateCopyWith<$Res> implements $DelegateCopyWith<$Res> {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) ReceivedVotes? votes,
+      @JsonKey(name: 'votesReceived') @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -319,7 +320,7 @@ class _$_Delegate implements _Delegate {
       {@HiveField(0) this.username,
       @HiveField(1) this.address,
       @HiveField(2) this.publicKey,
-      @HiveField(3) this.votes,
+      @JsonKey(name: 'votesReceived') @HiveField(3) this.votes,
       @HiveField(4) this.rank,
       @HiveField(5) this.isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) this.delegateBlocks,
@@ -340,6 +341,7 @@ class _$_Delegate implements _Delegate {
   @HiveField(2)
   final String? publicKey;
   @override
+  @JsonKey(name: 'votesReceived')
   @HiveField(3)
   final ReceivedVotes? votes;
   @override
@@ -419,7 +421,7 @@ abstract class _Delegate implements Delegate {
       {@HiveField(0) String? username,
       @HiveField(1) String? address,
       @HiveField(2) String? publicKey,
-      @HiveField(3) ReceivedVotes? votes,
+      @JsonKey(name: 'votesReceived') @HiveField(3) ReceivedVotes? votes,
       @HiveField(4) int? rank,
       @HiveField(5) bool? isResigned,
       @JsonKey(name: 'blocks') @HiveField(6) DelegateBlocks? delegateBlocks,
@@ -439,6 +441,7 @@ abstract class _Delegate implements Delegate {
   @HiveField(2)
   String? get publicKey;
   @override
+  @JsonKey(name: 'votesReceived')
   @HiveField(3)
   ReceivedVotes? get votes;
   @override
